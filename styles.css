@@ -1,3 +1,23 @@
+/* Self-hosted fonts recovered from the original site uploads. */
+@font-face {
+  font-family: "Nanum Pen";
+  src: url("assets/fonts/NanumPenScript-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Grafier";
+  src: url("assets/fonts/PPGrafier-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-body: "PP Grafier", Georgia, serif;
+  --font-title: "Nanum Pen", cursive;
+}
+
 
 
 
@@ -346,4 +366,4 @@ gallery-slideshow::part(slideshow-nav) {
 	min-height: var(--viewport-height);
 	justify-content: flex-end;
 }
-body{font-family:Georgia,'Times New Roman',serif}.flight-home{min-height:85vh}.flight-home .page-content{padding:32px}.flight-home .columns{gap:32px}.flight-home .cover{font-family:Georgia,serif;font-size:20px;line-height:1.5}.flight-home .webtitle{font:italic 28px/1.2 Georgia,serif}.flight-information{max-width:900px;margin:0 auto;padding:32px;font-size:20px;line-height:1.6}.flight-information .gallery-grid{margin:30px 0}.flight-information .caption{font:14px/1.4 Arial,sans-serif}.flight-information .columns{font:18px/1.4 Georgia,serif}@media(max-width:600px){.flight-home .page-content,.flight-information{padding:20px}.flight-home .cover,.flight-information{font-size:18px}}
+body{font-family:var(--font-body)}.flight-home{min-height:85vh}.flight-home .page-content{padding:32px}.flight-home .columns{gap:32px}.flight-home .cover{font-family:var(--font-body);font-weight:400;font-size:20px;line-height:1.5}.flight-home .webtitle{font:400 28px/1.2 var(--font-title)}.flight-home .webtitle i{font-style:normal}.flight-information{max-width:900px;margin:0 auto;padding:32px;font-size:20px;line-height:1.6}.flight-information .gallery-grid{margin:30px 0}.flight-information .caption{font:400 14px/1.4 var(--font-body)}.flight-information .columns{font:400 18px/1.4 var(--font-body)}@media(max-width:600px){.flight-home .page-content,.flight-information{padding:20px}.flight-home .cover,.flight-information{font-size:18px}}
