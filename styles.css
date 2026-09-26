@@ -405,3 +405,27 @@ html{scroll-behavior:smooth}
 .interviews-back{display:block;width:fit-content;max-width:1200px;margin:48px auto 0;font:21px/1.4 var(--font-title);text-decoration:none;color:#567e99}
 @media(max-width:650px){.scroll-invitation{margin-bottom:44px}.interview-grid{grid-template-columns:1fr;gap:16px}.interview-person{min-height:0;padding-bottom:22px}.interview-person h2{margin:15px 0 20px;font-size:30px}.interviews-intro{font-size:16px}.interviews{padding-top:42px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-invitation svg{transition:none}}
+
+/* Text movement is driven continuously by scroll position. */
+.interviews{overflow:clip}
+.scroll-text{will-change:transform,opacity;transform:translate3d(var(--reveal-x,0px),var(--reveal-y,0px),0);opacity:var(--reveal-opacity,1)}
+@media(prefers-reduced-motion:reduce){.scroll-text{transform:none!important;opacity:1!important;will-change:auto}}
+
+/* Cinema follows the interviews as a third scrolling chapter. */
+.films-invitation{margin:32px auto 0}
+.films{min-height:100svh;box-sizing:border-box;overflow:clip;background:#38232d;color:#faeee3;padding:clamp(48px,7vw,100px) clamp(24px,5vw,80px) 36px}
+.films:focus{outline:none}.films-inner{max-width:1200px;margin:0 auto}
+.films-kicker{font:22px/1.2 var(--font-title);color:#dbaaa2;margin:0 0 30px}
+#films-title{color:#faeee3;font:400 clamp(48px,7vw,96px)/1.04 var(--font-body);letter-spacing:-.04em;margin:0 0 60px}
+#films-title em{font-family:var(--font-title);font-weight:400;color:#e7a198;letter-spacing:0}
+.film-entry{display:grid;grid-template-columns:60px minmax(0,1fr);gap:24px;border-top:1px solid #faeee340;padding:30px 0 38px}
+.film-number{display:block;font:24px/1.4 var(--font-title);color:#dbaaa2}
+.film-entry h2{font:400 clamp(27px,4.3vw,60px)/1.17 var(--font-body);letter-spacing:-.025em;margin:0;color:inherit}
+.films-back{display:block;width:fit-content;margin:45px auto 0;font:21px/1.4 var(--font-title);color:#dbaaa2;text-decoration:none}
+@media(max-width:650px){.film-entry{grid-template-columns:26px minmax(0,1fr);gap:14px;padding:25px 0 32px}#films-title{margin-bottom:42px}.films-invitation{margin-top:20px}}
+
+/* A persistent silhouette of the same fish anchors the left edge. */
+body:has(.fish-silhouette-rail){padding-left:64px}
+.fish-silhouette-rail{position:fixed;inset:0 auto 0 0;width:64px;background:#f0edf0;z-index:10;pointer-events:none;border-right:1px solid #38232d12}
+.fish-silhouette-rail span{position:absolute;left:50%;top:var(--fish-top,12%);display:block;width:104px;height:54px;transform:translate(calc(-50% + var(--fish-sway,0px)),-50%) rotate(var(--fish-angle,90deg));background:#786475;mask:url('assets/fish.webp') center/contain no-repeat;-webkit-mask:url('assets/fish.webp') center/contain no-repeat;opacity:.7}
+@media(max-width:650px){body:has(.fish-silhouette-rail){padding-left:30px}.fish-silhouette-rail{width:30px}.fish-silhouette-rail span{width:50px;height:26px}}

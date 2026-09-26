@@ -7,11 +7,12 @@
   <title>
    Main page — Between Flight and Form
   </title>
-  <link href="styles.css?v=20260926-interviews" rel="stylesheet"/>
-  <script defer="" src="site.js?v=20260926-fish">
+  <link href="styles.css?v=20260926-rail" rel="stylesheet"/>
+  <script defer="" src="site.js?v=20260926-rail">
   </script>
  </head>
  <body>
+  <div class="fish-silhouette-rail" aria-hidden="true"><span></span></div>
   <main class="page flight-home" id="J3964441023">
    <div class="page-content">
     <div class="columns" mobile-gutter="2rem" style=";--gap:1rem">
@@ -101,7 +102,28 @@
       <p class="interview-pending">Interview coming soon</p>
      </article>
     </div>
-    <a class="interviews-back" href="#J3964441023">Back to the fish ↑</a>
+    <a class="scroll-invitation films-invitation" href="#films"><span>Scroll down</span><span class="scroll-caption">Women in cinema ↓</span></a>
+   </section>
+   <section class="films" id="films" aria-labelledby="films-title" tabindex="-1">
+    <div class="films-inner">
+     <p class="films-kicker" data-reveal="left">03 / Cinema</p>
+     <h1 id="films-title" data-reveal="left">Women<br/>on <em>screen.</em></h1>
+     <div class="film-list">
+      <article class="film-entry" aria-labelledby="film-one">
+       <span class="film-number" data-reveal="left">01</span>
+       <h2 id="film-one" data-reveal="right">The Bold, the Corrupt,<br/>and the Beautiful</h2>
+      </article>
+      <article class="film-entry" aria-labelledby="film-two">
+       <span class="film-number" data-reveal="left">02</span>
+       <h2 id="film-two" data-reveal="bottom">Raise the Red Lantern</h2>
+      </article>
+      <article class="film-entry" aria-labelledby="film-three">
+       <span class="film-number" data-reveal="left">03</span>
+       <h2 id="film-three" data-reveal="right">In the Mood for Love</h2>
+      </article>
+     </div>
+     <a class="films-back" href="#J3964441023">Back to the fish ↑</a>
+    </div>
    </section>
   </main>
  </body>
