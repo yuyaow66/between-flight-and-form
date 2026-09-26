@@ -9,3 +9,7 @@ The pigeon animation and its interaction instructions are removed. Original proj
 ## Fish interaction
 
 The home page uses the owner's isolated watercolor fish in `assets/fish.webp`, rendered from the editable vector master in the sibling `fish-vector` folder. Click the fish (or focus it and press Enter/Space) three times to separate it into four parts. Start again resets it. The knife is an inline SVG in index.html; layout and timing are in styles.css and site.js. Reduced-motion preferences are respected.
+
+## Interviews
+
+The Scroll down link leads to #interviews on the home page. Mother, grandmother and aunt each have an article in index.html. Replace their pending notes with real interview material; no quotations or responses have been invented.
