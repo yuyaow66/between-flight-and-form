@@ -367,3 +367,19 @@ gallery-slideshow::part(slideshow-nav) {
 	justify-content: flex-end;
 }
 body{font-family:var(--font-body)}.flight-home{min-height:85vh}.flight-home .page-content{padding:32px}.flight-home .columns{gap:32px}.flight-home .cover{font-family:var(--font-body);font-weight:400;font-size:20px;line-height:1.5}.flight-home .webtitle{font:italic 400 28px/1.2 var(--font-title)}.flight-home .webtitle i{font-style:inherit}.flight-information{max-width:900px;margin:0 auto;padding:32px;font-size:20px;line-height:1.6}.flight-information .gallery-grid{margin:30px 0}.flight-information .caption{font:400 14px/1.4 var(--font-body)}.flight-information .columns{font:400 18px/1.4 var(--font-body)}@media(max-width:600px){.flight-home .page-content,.flight-information{padding:20px}.flight-home .cover,.flight-information{font-size:18px}}
+/* Interactive watercolor fish: three cuts produce four pieces. */
+.fish-interaction{max-width:1120px;margin:35px auto 0;padding:0 60px 32px}
+.fish-stage{position:relative;display:block;width:100%;aspect-ratio:1.92;border:0;padding:0;background:transparent;color:inherit;cursor:crosshair;-webkit-tap-highlight-color:transparent;touch-action:manipulation;isolation:isolate}
+.fish-stage:focus-visible{outline:1px dashed #777;outline-offset:14px;border-radius:6px}
+.fish-piece{position:absolute;inset:0;clip-path:inset(0 var(--right) 0 var(--left));transform:translate(var(--shift,0%),var(--drop,0%)) rotate(var(--tilt,0deg));transition:transform 650ms cubic-bezier(.2,.7,.2,1);pointer-events:none;will-change:transform}
+.fish-piece img{display:block;width:100%;height:100%;object-fit:contain;user-select:none}
+.fish-knife{position:absolute;left:80%;top:8%;width:10%;height:63%;transform:translate(-55%,-25%) rotate(-16deg);transform-origin:50% 95%;transition:left 500ms ease,opacity 200ms;pointer-events:none;filter:drop-shadow(2px 4px 3px #35274320)}
+.fish-knife svg{height:100%;width:100%;overflow:visible}
+.fish-stage.is-cutting .fish-knife{animation:knife-cut 420ms ease-in-out}
+.fish-stage[data-cuts="3"]{cursor:default}
+.fish-stage[data-cuts="3"] .fish-knife{opacity:0}
+.fish-controls{display:flex;justify-content:center;align-items:center;gap:24px;min-height:50px;margin-top:20px;font:18px/1.4 var(--font-title);color:#69616f}
+.fish-status{margin:0}.fish-reset{font:inherit;color:inherit;background:none;border:0;border-bottom:1px solid #aaa;padding:4px 0;cursor:pointer}.fish-reset[hidden]{display:none}
+@keyframes knife-cut{0%,100%{transform:translate(-55%,-25%) rotate(-16deg)}45%{transform:translate(-55%,15%) rotate(-7deg)}}
+@media(max-width:600px){.fish-interaction{margin:26px auto 0;padding:0 28px 24px}.fish-controls{margin-top:18px;font-size:17px;gap:18px}.fish-knife{width:12%;height:68%}}
+@media(prefers-reduced-motion:reduce){.fish-piece,.fish-knife{transition:none}.fish-stage.is-cutting .fish-knife{animation:none}}

@@ -7,8 +7,8 @@
   <title>
    Main page — Between Flight and Form
   </title>
-  <link href="styles.css?v=20260926-italic" rel="stylesheet"/>
-  <script defer="" src="site.js">
+  <link href="styles.css?v=20260926-fish" rel="stylesheet"/>
+  <script defer="" src="site.js?v=20260926-fish">
   </script>
  </head>
  <body>
@@ -53,6 +53,26 @@
      </div>
     </div>
    </div>
+
+   <section class="fish-interaction" aria-label="Cut the watercolor fish">
+    <button class="fish-stage" type="button" aria-label="Cut the fish. 1 of 4 pieces." data-cuts="0">
+     <span class="fish-piece" style="--i:0;--left:0%;--right:60%"><img src="assets/fish.webp" alt="" draggable="false" width="1800" height="940"></span>
+     <span class="fish-piece" style="--i:1;--left:40%;--right:40%"><img src="assets/fish.webp" alt="" draggable="false" width="1800" height="940"></span>
+     <span class="fish-piece" style="--i:2;--left:60%;--right:20%"><img src="assets/fish.webp" alt="" draggable="false" width="1800" height="940"></span>
+     <span class="fish-piece" style="--i:3;--left:80%;--right:0%"><img src="assets/fish.webp" alt="" draggable="false" width="1800" height="940"></span>
+     <span class="fish-knife" aria-hidden="true">
+      <svg viewBox="0 0 90 320" xmlns="http://www.w3.org/2000/svg">
+       <defs><linearGradient id="blade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f9ff"/><stop offset=".5" stop-color="#bccbd5"/><stop offset="1" stop-color="#ddd0e8"/></linearGradient></defs>
+       <path d="M40 114L77 111 73 277Q65 303 22 317L35 185Z" fill="url(#blade)" stroke="#687483" stroke-width="1.5"/>
+       <path d="M22 317Q53 277 56 204L58 116" fill="none" stroke="#fff" stroke-width="2" opacity=".85"/>
+       <path d="M43 8Q62 2 77 12L77 116 38 120Z" fill="#494157" stroke="#302a38" stroke-width="2"/>
+       <path d="M48 17L44 108" stroke="#827388" stroke-width="3" opacity=".6"/>
+       <circle cx="59" cy="35" r="4" fill="#c2bbc4"/><circle cx="57" cy="88" r="4" fill="#c2bbc4"/>
+      </svg>
+     </span>
+    </button>
+    <div class="fish-controls"><p class="fish-status" aria-live="polite">Click to cut · 1 / 4 pieces</p><button class="fish-reset" type="button" hidden>Start again ↺</button></div>
+   </section>
   </main>
  </body>
 </html>
