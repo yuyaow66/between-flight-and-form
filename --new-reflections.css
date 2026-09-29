@@ -1,0 +1,8 @@
+html:not([data-theme='dark']) #J3964441023 #looking-back .--new-reflection {
+  display: none !important;
+}
+html[data-theme='dark'] #J3964441023 #looking-back .--new-reflection :is(summary, p, span) {
+  color: #e5026b !important;
+  font-size: clamp(20px, 1.9vw, 27px) !important;
+  line-height: 1.5 !important;
+}

@@ -1,0 +1,42 @@
+.home-glass {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+.home-glass canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.glass-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+html:not([data-theme='dark']) .glass-rendered > .columns .webtitle {
+  opacity: 0;
+}
+html[data-theme='dark'] .home-glass {
+  display: none;
+}
+html:not([data-theme='dark']) .glass-fallback > .columns {
+  filter: url(#liquid-type-fallback);
+}
+html:not([data-theme='dark']) .glass-rendered:focus-within > .columns .webtitle {
+  opacity: 1;
+}
+.glass-rendered:focus-within > .home-glass {
+  visibility: hidden;
+}
+@media print {
+  .home-glass {
+    display: none;
+  }
+  html:not([data-theme='dark']) .glass-rendered > .columns .webtitle {
+    opacity: 1;
+  }
+}

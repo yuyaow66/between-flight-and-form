@@ -1,0 +1,144 @@
+html:not([data-theme='dark'])
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #films,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    button,
+    summary,
+    span,
+    em,
+    i,
+    b,
+    strong,
+    small,
+    blockquote,
+    figcaption,
+    li,
+    dt,
+    dd,
+    label,
+    input,
+    textarea,
+    select,
+    text,
+    textPath,
+    tspan
+  ) {
+  color: #443959 !important;
+}
+
+html:not([data-theme='dark'])
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(
+    h3,
+    a,
+    summary,
+    .chapter-lead,
+    .stage-question,
+    .word-question,
+    .window-bottom,
+    .sheet-caption,
+    .new-interview-meta,
+    .comparison-answer h4,
+    .spiral-words text,
+    .spiral-words textPath
+  ),
+html:not([data-theme='dark'])
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(h3, a, summary, .window-bottom)
+  :is(span, em, i, strong, small),
+html:not([data-theme='dark']) #J3964441023 > .scroll-invitation,
+html:not([data-theme='dark']) #J3964441023 > .scroll-invitation span {
+  color: #1d7b80 !important;
+}
+html:not([data-theme='dark']) #J3964441023 #interviews .spiral-words :is(text, textPath, tspan) {
+  fill: currentColor;
+}
+
+html:not([data-theme='dark'])
+  #J3964441023
+  #films
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a,
+    button,
+    summary,
+    span,
+    em,
+    i,
+    b,
+    strong,
+    small,
+    blockquote,
+    figcaption
+  ) {
+  color: #dcd6e2 !important;
+}
+html:not([data-theme='dark']) #J3964441023 #films :is(#films-title em, .film-reading h3) {
+  color: #1d7b80 !important;
+}
+
+html:not([data-theme='dark']) body :is(#questions-drawer, #question-reader),
+html:not([data-theme='dark'])
+  body
+  :is(#questions-drawer, #question-reader)
+  :is(h1, h2, h3, h4, p, a, button, span, em, i, strong, small, blockquote, figcaption) {
+  color: #443959 !important;
+}
+html:not([data-theme='dark'])
+  body
+  :is(#questions-drawer, #question-reader)
+  :is(h2, h3, a, .questions-nav button, .paper-note small, .reader-controls button) {
+  color: #1d7b80 !important;
+}
+
+html:not([data-theme='dark']) #J3964441023 #interviews #care-title {
+  color: #443959 !important;
+}
+html:not([data-theme='dark']) #J3964441023 #films::before {
+  color: #dcd6e2;
+}
+html:not([data-theme='dark']) #J3964441023 #looking-back::before {
+  color: #443959;
+}

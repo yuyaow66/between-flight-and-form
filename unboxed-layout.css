@@ -1,0 +1,30 @@
+html
+  .collage-layout
+  :is(
+    .knife-question,
+    .interviews,
+    .films,
+    .looking-back,
+    .beyond,
+    .conversation-sheet,
+    .film-entry,
+    .generations,
+    .response-entry,
+    .added-chapter,
+    .interview-person,
+    .portrait-window,
+    .portrait-placeholder,
+    .window-bottom,
+    .stage-number
+  ) {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html .collage-layout .portrait-window img {
+  box-shadow: none !important;
+}
+html :is(.flight-information, .drawer-content) [style*='background:'] {
+  background: transparent !important;
+}

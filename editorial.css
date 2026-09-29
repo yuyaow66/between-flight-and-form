@@ -1,0 +1,746 @@
+.new-editorial {
+  --new-paper: #f2ede3;
+  --new-ink: #182d3b;
+  --new-red: #b41a23;
+  --new-secondary: #58616a;
+  --new-rule: #c7c1b7;
+
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+}
+html .collage-layout .new-editorial {
+  background: var(--new-paper) !important;
+  color: var(--new-ink);
+  margin: 0;
+  padding: 104px clamp(24px, 5.5vw, 80px);
+  overflow: clip;
+}
+html
+  body
+  .new-editorial
+  :is(p, li, blockquote, summary, figcaption, button, .personal-answer, .reflection-details) {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: var(--new-ink);
+}
+html body .new-editorial :is(p, blockquote) {
+  margin: 0 0 24px;
+}
+html .collage-layout .new-editorial :is(.chapter-title, #films-title),
+html .collage-layout .new-editorial :is(.chapter-title, #films-title) em {
+  font-size: clamp(64px, 7vw, 104px);
+  line-height: 1.02;
+  color: var(--new-ink) !important;
+  letter-spacing: -0.035em;
+  text-shadow: none;
+}
+html .collage-layout .new-editorial .chapter-title em {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit !important;
+}
+html .new-editorial .chapter-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+html body .new-editorial .chapter-folio {
+  position: absolute;
+  top: 32px;
+  left: clamp(24px, 5.5vw, 80px);
+  margin: 0;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.08em;
+  color: var(--new-secondary);
+}
+.new-editorial:nth-of-type(even) > .chapter-folio {
+  left: auto;
+  right: clamp(24px, 5.5vw, 80px);
+}
+.new-editorial > .chapter-ideograph {
+  position: absolute;
+  top: -0.17em;
+  right: -0.18em;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  font-size: clamp(320px, 46vw, 720px);
+  line-height: 1;
+  color: var(--new-ink);
+  opacity: 0.065;
+  mix-blend-mode: multiply;
+}
+html[data-theme='dark']
+  .new-editorial
+  :is(h1, h2, h3, h4, p, summary, button, span):not(.paper-label) {
+  animation: none !important;
+  rotate: none !important;
+}
+html[data-theme='dark'] .collage-layout > .page-content .column,
+html[data-theme='dark']
+  :is(
+    .theme-toggle,
+    .theme-context,
+    .fish-controls,
+    .scroll-invitation,
+    .interviews-back,
+    .films-back
+  ) {
+  animation: none !important;
+}
+html .new-editorial .chapter-title {
+  margin: 0 0 48px;
+}
+html .new-editorial h3 {
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+html .new-editorial a {
+  color: inherit;
+  text-underline-offset: 5px;
+}
+html .new-editorial :is(button, summary, a):focus-visible {
+  outline: 2px solid var(--new-red);
+  outline-offset: 5px;
+}
+html .collage-layout > .page-content > .columns > .column:first-child .cover,
+html .collage-layout > .page-content > .columns > .column:nth-child(2) > .cover {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.025em;
+}
+html .flight-home.collage-layout > .page-content > .columns > .column:nth-child(3) {
+  justify-self: end;
+  width: 58%;
+  max-width: 640px;
+  margin: 32px 0 24px;
+  text-align: left;
+}
+html .collage-layout > .page-content > .columns > .column:nth-child(3) .cover {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+}
+html .theme-toggle {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  border-radius: 0;
+  min-height: 44px;
+}
+html .theme-toggle .theme-state {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+html .collage-layout .fish-stage {
+  background: transparent;
+  border-radius: 0;
+}
+html body .fish-controls :is(button, p) {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+html .films-invitation {
+  align-items: flex-start;
+  margin: 48px clamp(24px, 5.5vw, 80px);
+  width: fit-content;
+}
+html body .films-invitation > span:first-child {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+html body .films-invitation .scroll-caption {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+}
+html .collage-layout #who-holds-the-knife {
+  padding-top: 104px;
+  padding-bottom: 104px;
+  min-height: 0;
+}
+html .collage-layout #who-holds-the-knife .chapter-inner {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 32px 6%;
+  align-items: start;
+}
+html .collage-layout #knife-title {
+  grid-column: 1/-1;
+  grid-row: auto;
+  max-width: none;
+  font-size: clamp(55px, 6.9vw, 100px);
+  margin: 0 0 24px;
+}
+#knife-title br {
+  display: none;
+}
+html #who-holds-the-knife .chapter-lead {
+  grid-column: 1;
+  padding: 24px 0 0;
+  max-width: 360px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+html #who-holds-the-knife .expectation-words {
+  grid-column: 2;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+  max-width: 630px;
+  padding: 0;
+  margin: 0;
+}
+html #who-holds-the-knife .chapter-note {
+  grid-column: 1;
+  align-self: end;
+  max-width: 320px;
+  font-size: 16px;
+  color: var(--new-secondary);
+  margin: 64px 0 0;
+}
+#who-holds-the-knife .paper-label:nth-child(1) {
+  --paper-angle: -2deg;
+}
+#who-holds-the-knife .paper-label:nth-child(2) {
+  --paper-angle: 3deg;
+  margin-top: 48px;
+}
+#who-holds-the-knife .paper-label:nth-child(3) {
+  --paper-angle: 2deg;
+}
+#who-holds-the-knife .paper-label:nth-child(4) {
+  --paper-angle: -3deg;
+  margin-top: 28px;
+}
+#who-holds-the-knife .paper-label:nth-child(5) {
+  --paper-angle: -2deg;
+  justify-self: end;
+  width: 46%;
+  margin-right: 8%;
+}
+.paper-label.is-draggable-paper {
+  translate: var(--new-drag-x, 0px) var(--new-drag-y, 0px);
+  user-select: none;
+}
+.paper-label.is-dragging {
+  position: relative;
+  z-index: 3;
+}
+.paper-label:focus-visible {
+  outline: 1px dashed #b41a23;
+  outline-offset: 8px;
+}
+.chapter-band {
+  height: 80px;
+  position: relative;
+  pointer-events: none;
+  background: linear-gradient(180deg, #f2ede3, #c4d0d2 55%, #182d3b);
+}
+.chapter-band.cinema-band {
+  background: linear-gradient(180deg, #f2ede3, #596a72 58%, #121416);
+  height: 112px;
+}
+.chapter-band.ink-to-paper {
+  background: linear-gradient(180deg, #f2ede3, #b0bdc0, #f2ede3);
+  height: 64px;
+}
+.chapter-band.closing-band {
+  height: 96px;
+  background: linear-gradient(180deg, #f2ede3, #9eb7c2 48%, #f2ede3);
+}
+html .collage-layout #a-life-unfolding {
+  padding-top: 104px;
+  padding-bottom: 128px;
+}
+html #a-life-unfolding .life-layout {
+  display: block;
+}
+html #a-life-unfolding .life-heading {
+  position: static;
+  width: 77%;
+  margin: 0 0 80px -5vw;
+}
+html .collage-layout #a-life-unfolding #life-title {
+  font-size: clamp(80px, 11vw, 144px);
+  line-height: 0.98;
+  color: var(--new-red) !important;
+  max-width: 1100px;
+}
+#life-title br {
+  display: none;
+}
+html #a-life-unfolding > .chapter-ideograph {
+  left: auto;
+  right: -0.12em;
+  top: 0.25em;
+  font-size: clamp(360px, 56vw, 800px);
+}
+html #a-life-unfolding .life-stages {
+  border: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 80px 0;
+}
+html #a-life-unfolding .life-stages article {
+  grid-column: 5/-1;
+  max-width: 650px;
+  padding: 0 0 0 28px;
+  border: 0;
+  margin: 0;
+}
+html #a-life-unfolding .life-stages article:nth-child(even) {
+  grid-column: 2/9;
+}
+html #a-life-unfolding .life-stages h3 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+html #a-life-unfolding .stage-number {
+  position: static;
+  display: block;
+  padding: 0;
+  margin: 0 0 24px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--new-red);
+  background: none;
+}
+html body #a-life-unfolding p.stage-question {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  color: var(--new-red);
+}
+html[data-theme='dark'] #a-life-unfolding.net-ready .life-stages {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+}
+html[data-theme='dark'] #a-life-unfolding .life-heading {
+  width: 90%;
+  margin-bottom: 48px;
+}
+html #words-we-inherit .chapter-inner {
+  display: block;
+}
+html .collage-layout #words-we-inherit #inherited-title {
+  font-size: 48px;
+  max-width: 450px;
+  margin: 0 0 96px 7%;
+}
+#inherited-title br {
+  display: none;
+}
+html #words-we-inherit .inherited-words {
+  margin: 0;
+}
+html #words-we-inherit .inherited-words article {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 8%;
+  align-items: start;
+  padding: 56px 0 64px;
+  border: 0;
+}
+html #words-we-inherit .inherited-words article:nth-child(even) {
+  grid-template-columns: 6fr 5fr;
+}
+html #words-we-inherit .inherited-words article:nth-child(even) h3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+html #words-we-inherit .inherited-words article:nth-child(even) > div {
+  grid-column: 1;
+  grid-row: 1;
+}
+html #words-we-inherit .inherited-words h3 {
+  font-size: clamp(70px, 9vw, 128px);
+  line-height: 1;
+  color: var(--new-red);
+  margin: 0;
+}
+html #words-we-inherit .word-question {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  color: var(--new-ink);
+}
+html #questions-to-carry .carry-layout {
+  display: block;
+}
+html #questions-to-carry .carry-layout > header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+html .collage-layout #questions-to-carry #carry-title {
+  font-size: clamp(40px, 4vw, 56px);
+  margin: 0;
+  width: 58%;
+  order: -1;
+}
+html #questions-to-carry .chapter-kicker {
+  font-size: 14px;
+  margin: 0;
+  max-width: 200px;
+  color: var(--new-secondary);
+}
+html #questions-to-carry .carry-questions {
+  width: 75%;
+  margin-left: auto;
+}
+html #questions-to-carry .carry-questions summary {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  padding: 28px 0;
+}
+html #questions-to-carry .carry-questions details {
+  border: 0 !important;
+}
+html #questions-to-carry .carry-questions details p {
+  font-size: 18px;
+  max-width: 62ch;
+  padding-right: 32px;
+}
+html .collage-layout .listening-chapter {
+  padding-top: 80px;
+  padding-bottom: 104px;
+}
+html .listening-chapter .listening-layout {
+  grid-template-columns: 3fr 7fr;
+  gap: 12%;
+  align-items: start;
+}
+html .collage-layout .listening-chapter #listening-title {
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.15;
+  color: var(--new-secondary) !important;
+}
+html .listening-chapter .listening-copy {
+  max-width: 65ch;
+}
+html .listening-chapter .listening-copy a {
+  font-size: 16px;
+  line-height: 1.6;
+}
+html .collage-layout #beyond {
+  padding-top: 96px;
+  padding-bottom: 64px;
+}
+html .collage-layout #beyond::before {
+  content: none;
+}
+html .collage-layout #beyond #beyond-title {
+  font-size: clamp(36px, 4vw, 56px);
+  max-width: 480px;
+  margin: 0 0 80px;
+}
+html #beyond .chapter-lead {
+  font-size: 24px;
+  line-height: 1.5;
+  width: 60%;
+  max-width: 500px;
+  margin: 0 0 32px auto;
+}
+html #beyond .release-scene {
+  height: clamp(300px, 40vw, 600px);
+  margin: 64px 0 40px;
+}
+html #beyond .release-fish {
+  width: 80%;
+  left: 6%;
+  top: 8%;
+  max-width: none;
+}
+.editorial-release .release-fish {
+  transform: translate(var(--new-narrative-swim-x, 0px), var(--new-narrative-swim-y, 0px))
+    rotate(var(--new-narrative-swim-angle, 0deg));
+}
+.editorial-release .release-fish > span {
+  transform: translateX(calc((var(--piece) - 1.5) * var(--new-narrative-gap, 0px)));
+}
+html #beyond .release-fish img {
+  filter: none;
+}
+html body #beyond .ending-line {
+  font-size: clamp(32px, 4vw, 56px) !important;
+  line-height: 1.2 !important;
+  text-align: left;
+  margin: 0 0 80px 8%;
+  color: var(--new-ink);
+}
+html #beyond .interviews-back {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.new-parallax-frame {
+  translate: 0 var(--new-parallax-y, 0px);
+}
+html[data-theme='dark'] .new-editorial {
+  --new-paper: #182127;
+  --new-ink: #f2ede3;
+  --new-secondary: #bcbdb8;
+  --new-rule: #4b5255;
+  --new-red: #d45a58;
+}
+html[data-theme='dark'] .new-editorial > .chapter-ideograph {
+  mix-blend-mode: screen;
+}
+html[data-theme='dark'] .chapter-band {
+  filter: brightness(0.35);
+}
+.fish-silhouette-rail[data-new-outside='true'] {
+  visibility: hidden;
+}
+@media (max-width: 760px) {
+  html .collage-layout .new-editorial {
+    padding: 80px 24px;
+  }
+  html body .new-editorial :is(p, li, blockquote, summary, figcaption, button, .personal-answer) {
+    font-size: 17px;
+  }
+  html .collage-layout .new-editorial .chapter-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  html .new-editorial > .chapter-ideograph {
+    font-size: 78vw;
+  }
+  html .flight-home.collage-layout > .page-content > .columns > .column:nth-child(3) {
+    width: 90%;
+    margin-top: 24px;
+  }
+  html .collage-layout > .page-content > .columns > .column:nth-child(3) .cover {
+    font-size: 14px !important;
+  }
+  html .collage-layout #who-holds-the-knife {
+    padding: 72px 24px;
+  }
+  html #who-holds-the-knife .chapter-inner {
+    display: block;
+  }
+  html .collage-layout #knife-title {
+    font-size: clamp(40px, 9.5vw, 64px);
+    margin-bottom: 32px;
+  }
+  html #who-holds-the-knife .chapter-lead {
+    font-size: 21px;
+    padding: 0;
+    max-width: 250px;
+  }
+  html #who-holds-the-knife .expectation-words {
+    margin: 40px 0;
+    gap: 20px;
+  }
+  html #who-holds-the-knife .chapter-note {
+    margin: 40px 0 0 auto;
+    width: 80%;
+    font-size: 15px;
+  }
+  .chapter-band {
+    height: 48px;
+  }
+  .chapter-band.cinema-band {
+    height: 72px;
+  }
+  html #a-life-unfolding .life-heading {
+    width: 100%;
+    margin: 0 0 64px;
+  }
+  html .collage-layout #a-life-unfolding #life-title {
+    font-size: clamp(54px, 13vw, 86px);
+  }
+  html #a-life-unfolding .life-stages {
+    display: block;
+    margin: 0;
+  }
+  html #a-life-unfolding .life-stages article {
+    max-width: none;
+    margin: 0 0 56px;
+    padding-left: 20px;
+  }
+  html #a-life-unfolding .life-stages article:nth-child(even) {
+    margin-left: 7%;
+  }
+  html #a-life-unfolding .life-stages h3 {
+    font-size: 24px;
+  }
+  html body #a-life-unfolding p.stage-question {
+    font-size: 21px !important;
+  }
+  html .collage-layout #words-we-inherit #inherited-title {
+    font-size: 36px;
+    margin: 0 0 48px;
+  }
+  html #words-we-inherit .inherited-words article {
+    display: block;
+    padding: 40px 0;
+  }
+  html #words-we-inherit .inherited-words h3 {
+    font-size: 72px;
+    margin: 0 0 32px;
+  }
+  html #words-we-inherit .inherited-words article:nth-child(even) {
+    padding-left: 7%;
+  }
+  html #words-we-inherit .word-question {
+    font-size: 21px !important;
+  }
+  html #questions-to-carry .carry-layout > header {
+    display: block;
+  }
+  html .collage-layout #questions-to-carry #carry-title {
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+  html #questions-to-carry .carry-questions {
+    width: 100%;
+    margin: 0;
+  }
+  html #questions-to-carry .carry-questions summary {
+    font-size: 21px !important;
+    padding: 24px 0;
+  }
+  html #questions-to-carry .carry-questions details p {
+    font-size: 17px;
+  }
+  html .listening-chapter .listening-layout {
+    display: block;
+  }
+  html .collage-layout .listening-chapter #listening-title {
+    font-size: 36px;
+    width: 75%;
+    margin-bottom: 40px;
+  }
+  html #beyond .chapter-lead {
+    width: 83%;
+    font-size: 21px;
+  }
+  html #beyond .release-scene {
+    height: 250px;
+    margin: 56px -12px 24px;
+  }
+  html #beyond .release-fish {
+    width: 94%;
+    left: 0;
+    top: 5%;
+  }
+  html #beyond .interviews-back {
+    font-size: 13px;
+  }
+}
+
+.new-editorial > .chapter-ideograph {
+  font-family: 'PingFang ShaoHua', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html .collage-layout .new-editorial {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+html .collage-layout .new-editorial :is(.chapter-title, #films-title) {
+  padding-inline: 0.09em;
+  box-sizing: border-box;
+}
+html #a-life-unfolding .life-heading {
+  margin-left: 0;
+}
+html .new-editorial > .chapter-ideograph,
+html #a-life-unfolding > .chapter-ideograph {
+  top: 32px;
+  right: 5%;
+  left: auto;
+  font-size: clamp(180px, 32vw, 440px);
+  line-height: 1.2;
+  max-width: 90%;
+}
+html .theme-toggle {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+@media (max-width: 760px) {
+  html .new-editorial > .chapter-ideograph,
+  html #a-life-unfolding > .chapter-ideograph {
+    font-size: 48vw;
+    top: 32px;
+    right: 6%;
+  }
+}
+
+html body .collage-layout .new-editorial:not(#films) {
+  background: transparent !important;
+}
+.chapter-band {
+  display: none;
+}
+
+html body .collage-layout .new-editorial :is(.chapter-title, #films-title),
+html body .collage-layout .new-editorial :is(.chapter-title, #films-title) em {
+  text-transform: uppercase !important;
+}
+
+html
+  body
+  .collage-layout
+  .new-editorial
+  :is(
+    .life-stages,
+    .life-stages article,
+    .inherited-words article,
+    .carry-questions details,
+    .reflection-prompts,
+    .interview-listening,
+    .comparison,
+    .sheet-question,
+    .response-entry,
+    .film-entry
+  ) {
+  border: 0 !important;
+}
+html body .drawer-header {
+  border-bottom: 0;
+}
+
+html #questions-to-carry .carry-questions .--new-carry-prompt {
+  margin: 0;
+  padding: 28px 0;
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+}
+html body #J3964441023 .--new-listening-copy > p {
+  font-size: 13px;
+}
+html #J3964441023 .--new-content-placeholder:empty {
+  min-height: 1lh;
+}
+@media (max-width: 700px) {
+  html #questions-to-carry .carry-questions .--new-carry-prompt {
+    font-size: 21px !important;
+    padding: 24px 0;
+  }
+  html body #J3964441023 :is(#looking-title, #listening-title).--new-conversational-title {
+    width: 100%;
+  }
+  html #J3964441023 #listening-title.--new-conversational-title em {
+    font-size: inherit;
+  }
+}

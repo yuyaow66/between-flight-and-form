@@ -1,0 +1,195 @@
+html[data-theme='dark']
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #films,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    button,
+    summary,
+    span,
+    em,
+    i,
+    b,
+    strong,
+    small,
+    blockquote,
+    figcaption,
+    li,
+    dt,
+    dd,
+    label,
+    input,
+    textarea,
+    select,
+    text,
+    textPath,
+    tspan
+  ) {
+  color: #d3ccb9 !important;
+}
+
+html[data-theme='dark']
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #films,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(h1, h2),
+html[data-theme='dark']
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #films,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(h1, h2)
+  :is(span, em, i, strong),
+html[data-theme='dark'] #J3964441023 #interviews #care-title {
+  color: #e5026b !important;
+}
+
+html[data-theme='dark']
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #films,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(h3, summary, .chapter-lead, .stage-question, .word-question),
+html[data-theme='dark']
+  #J3964441023
+  :is(
+    #who-holds-the-knife,
+    #interviews,
+    #a-life-unfolding,
+    #films,
+    #looking-back,
+    #words-we-inherit,
+    #questions-to-carry,
+    .listening-chapter,
+    #beyond
+  )
+  :is(h3, summary, .chapter-lead, .stage-question, .word-question)
+  :is(span, em, i, strong) {
+  color: #017a80 !important;
+}
+
+html[data-theme='dark'] #J3964441023 > .scroll-invitation,
+html[data-theme='dark'] #J3964441023 > .scroll-invitation span {
+  color: #d3ccb9 !important;
+}
+html[data-theme='dark'] #J3964441023 #interviews .spiral-words :is(text, textPath, tspan) {
+  fill: currentColor;
+}
+html[data-theme='dark'] #J3964441023 :is(#films, #looking-back)::before {
+  color: #d3ccb9;
+}
+
+html[data-theme='dark'] body :is(#questions-drawer, #question-reader),
+html[data-theme='dark']
+  body
+  :is(#questions-drawer, #question-reader)
+  :is(h1, h2, h3, h4, p, a, button, span, em, i, strong, small, blockquote, figcaption) {
+  color: #d3ccb9 !important;
+}
+html[data-theme='dark'] body :is(#questions-drawer, #question-reader) :is(h2, h3) {
+  color: #e5026b !important;
+}
+html[data-theme='dark'] body :is(#questions-drawer, #question-reader) .paper-note,
+html[data-theme='dark']
+  body
+  :is(#questions-drawer, #question-reader)
+  .paper-note
+  :is(span, small, p) {
+  color: #017a80 !important;
+}
+
+html:not([data-theme='dark']) #J3964441023 :is(.film-question, .stage-question, .word-question) {
+  display: none !important;
+}
+
+html[data-theme='dark']
+  #J3964441023
+  :is(#films, #a-life-unfolding, #words-we-inherit)
+  p:is(.film-question, .stage-question, .word-question) {
+  display: block;
+  color: #e5026b !important;
+  font-size: clamp(20px, 1.9vw, 27px) !important;
+  line-height: 1.5 !important;
+  margin-top: 28px;
+  max-width: 38rem;
+}
+
+html[data-theme='dark'] #J3964441023 #a-life-unfolding.net-ready .life-stages {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 48px;
+  width: auto;
+  height: auto;
+  max-width: 960px;
+  margin: 0;
+  padding: 0;
+  clip-path: none;
+  overflow: visible;
+  white-space: normal;
+}
+
+html[data-theme='dark'] #J3964441023 #a-life-unfolding.net-ready .life-stages article {
+  margin: 0;
+  padding: 0;
+}
+
+html[data-theme='dark']
+  #J3964441023
+  #a-life-unfolding.net-ready
+  .life-stages
+  :is(h3, p:not(.stage-question)) {
+  display: none;
+}
+
+html[data-theme='dark'] #J3964441023 #a-life-unfolding.net-ready .life-stages p.stage-question {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  html[data-theme='dark'] #J3964441023 #a-life-unfolding.net-ready .life-stages {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

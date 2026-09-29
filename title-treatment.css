@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'PingFang ShaoHua';
+  src: url('assets/fonts/PingFangShaoHua.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Eiko';
+  src: url('assets/fonts/PPEiko-BlackItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Eiko';
+  src: url('assets/fonts/PPEiko-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Eiko';
+  src: url('assets/fonts/PPEiko-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+:root {
+  --poster-title: 'PP Eiko', 'Bodoni 72', 'Didot', Georgia, serif;
+}
+html .collage-layout .page-content .webtitle {
+  font: italic 300 clamp(66px, 9.35vw, 136px)/0.96 var(--poster-title);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  max-width: 1180px;
+  margin: 64px 0 22px;
+  color: #164e64;
+}
+html .collage-layout .page-content .webtitle i {
+  font-style: italic;
+}
+.sea-title-first {
+  display: flex;
+  align-items: baseline;
+  gap: 0.1em;
+  white-space: nowrap;
+}
+.title-article {
+  font-size: 1em;
+  letter-spacing: inherit;
+  align-self: baseline;
+}
+.title-shape {
+  display: inline-block;
+  white-space: nowrap;
+}
+.sea-title-second {
+  display: block;
+  padding-left: 21%;
+  white-space: nowrap;
+  margin-top: 0.14em;
+  position: relative;
+}
+html .collage-layout :is(.chapter-title, #interviews-title, #films-title) {
+  font-family: var(--poster-title);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase !important;
+  letter-spacing: -0.04em;
+}
+html .collage-layout :is(.chapter-title, #interviews-title, #films-title) em {
+  font: inherit;
+  letter-spacing: inherit;
+}
+html .collage-layout :is(.film-entry h2, .response-entry h3),
+html .drawer-header h2 {
+  font-family: var(--poster-title);
+  font-style: italic;
+  font-weight: 300;
+}
+@media (max-width: 650px) {
+  html .collage-layout .page-content .webtitle {
+    font-size: clamp(41px, 10.2vw, 66px);
+    margin-top: 42px;
+    line-height: 0.96;
+  }
+  .sea-title-second {
+    padding-left: 12%;
+    margin-top: 0.18em;
+  }
+}
+@media (max-width: 420px) {
+  html .collage-layout .page-content .webtitle {
+    font-size: 11.05vw;
+  }
+  .sea-title-second {
+    padding-left: 3%;
+  }
+}
+
+html .collage-layout .page-content .webtitle .sea-title-chinese {
+  display: block;
+  font-family: 'PingFang ShaoHua', 'Songti SC', serif;
+  font-size: 0.56em;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  line-height: 1.35;
+  letter-spacing: 0.18em;
+  text-align: right;
+  padding-right: 10%;
+  margin-top: 0.65em;
+}
+
+html .flight-home.collage-layout .page-content .webtitle,
+html .flight-home.collage-layout .page-content .webtitle span {
+  color: #b41a23 !important;
+}
+
+html .flight-home.collage-layout .page-content .webtitle {
+  text-shadow: 3px 4px 6px rgba(55, 31, 40, 0.36);
+}
+
+html .collage-layout :is(.chapter-title, #interviews-title, #films-title),
+html .collage-layout :is(.chapter-title, #interviews-title, #films-title) em {
+  color: #b41a23 !important;
+}

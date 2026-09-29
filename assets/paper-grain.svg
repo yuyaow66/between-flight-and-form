@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
+ <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency=".52" numOctaves="3" seed="17" stitchTiles="stitch" result="fine"/>
+  <feTurbulence type="fractalNoise" baseFrequency=".065 .095" numOctaves="2" seed="8" stitchTiles="stitch" result="paper"/>
+  <feComposite in="fine" in2="paper" operator="arithmetic" k1="0" k2=".82" k3=".18" k4="0"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer>
+   <feFuncR type="linear" slope="4" intercept="-1.5"/>
+   <feFuncG type="linear" slope="4" intercept="-1.5"/>
+   <feFuncB type="linear" slope="4" intercept="-1.5"/>
+   <feFuncA type="table" tableValues="1 1"/>
+  </feComponentTransfer>
+ </filter>
+ <rect width="384" height="384" filter="url(#grain)"/>
+</svg>

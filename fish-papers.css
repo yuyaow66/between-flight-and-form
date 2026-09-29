@@ -1,0 +1,57 @@
+html .collage-layout .fish-interaction {
+  padding-top: clamp(120px, 12vw, 168px);
+}
+
+.fish-paper-origin {
+  position: absolute;
+  left: 80%;
+  top: 52%;
+  width: 0;
+  height: 0;
+}
+
+.fish-papers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.fish-papers[hidden] {
+  display: none;
+}
+
+.fish-paper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: var(--paper-width);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(calc(-50% + var(--paper-x)), calc(-50% + var(--paper-y)))
+    rotate(var(--paper-angle)) scale(var(--paper-scale));
+  transform-origin: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fish-paper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.fish-paper:focus-visible {
+  outline: 1px dashed currentColor;
+  outline-offset: 6px;
+}

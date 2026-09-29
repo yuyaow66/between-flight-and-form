@@ -1,0 +1,76 @@
+.knife-question .expectation-words {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 26px 22px;
+  padding: 12px 0;
+}
+.paper-label {
+  --paper-angle: -5deg;
+  --paper-from: -45vw;
+  --paper-turn: -18deg;
+  --paper-delay: 0ms;
+  min-width: 0;
+  transform: rotate(var(--paper-angle));
+}
+.paper-label:nth-child(even) {
+  --paper-from: 45vw;
+  --paper-turn: 18deg;
+}
+.paper-label:nth-child(2) {
+  --paper-angle: 5deg;
+  --paper-delay: 120ms;
+}
+.paper-label:nth-child(3) {
+  --paper-angle: -3deg;
+  --paper-delay: 240ms;
+}
+.paper-label:nth-child(4) {
+  --paper-angle: 4deg;
+  --paper-delay: 360ms;
+}
+.paper-label:nth-child(5) {
+  --paper-angle: -8deg;
+  --paper-delay: 480ms;
+  grid-column: 1 / -1;
+  width: 45%;
+  justify-self: center;
+}
+.paper-label img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(3px 7px 5px rgba(35, 31, 24, 0.18));
+}
+.paper-labels-ready .paper-label {
+  opacity: 0;
+}
+.paper-labels-ready.is-visible .paper-label {
+  animation: paper-label-arrive 1150ms cubic-bezier(0.18, 0.72, 0.24, 1) var(--paper-delay) both;
+}
+@keyframes paper-label-arrive {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--paper-from), 24px, 0) rotate(var(--paper-turn)) scale(0.92);
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(var(--paper-angle)) scale(1);
+  }
+}
+@media (max-width: 650px) {
+  .knife-question .expectation-words {
+    gap: 25px 20px;
+    margin: 28px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .paper-labels-ready .paper-label,
+  .paper-labels-ready.is-visible .paper-label {
+    opacity: 1;
+    animation: none;
+  }
+}

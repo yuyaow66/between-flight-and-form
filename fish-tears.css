@@ -1,0 +1,75 @@
+.fish-tears {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+html[data-theme='dark'] .fish-tears {
+  display: block;
+}
+.fish-head {
+  clip-path: inset(0 var(--right) -30% var(--left));
+}
+.fish-teardrop {
+  transform-origin: 0 0;
+  opacity: 0;
+  animation: fish-tear-fall 3.3s var(--tear-delay) cubic-bezier(0.4, 0, 0.7, 1) infinite;
+}
+.fish-tear-trace {
+  opacity: 0.28;
+  animation: fish-tear-trace 3.3s ease-in-out infinite;
+}
+@keyframes fish-tear-fall {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.2, 0.25);
+  }
+  14% {
+    opacity: 0.8;
+    transform: translate(-2px, 5px) scale(0.7, 0.75);
+  }
+  32% {
+    opacity: 0.88;
+    transform: translate(-6px, 27px) scale(0.85, 1);
+  }
+  62% {
+    opacity: 0.72;
+    transform: translate(-10px, 103px) scale(0.8, 1.18);
+  }
+  86% {
+    opacity: 0.28;
+    transform: translate(-16px, 207px) scale(0.7, 1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-20px, 260px) scale(0.6, 1.25);
+  }
+}
+@keyframes fish-tear-trace {
+  0%,
+  100% {
+    opacity: 0.14;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.23;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fish-teardrop {
+    animation: none;
+    opacity: 0.8;
+    transform: translate(-4px, 14px) scale(0.75);
+  }
+  .fish-teardrop + .fish-teardrop {
+    display: none;
+  }
+  .fish-tear-trace {
+    animation: none;
+  }
+}

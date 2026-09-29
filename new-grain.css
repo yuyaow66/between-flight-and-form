@@ -1,0 +1,57 @@
+:root {
+  --new-grain-min: 0.12;
+  --new-grain-max: 0.9;
+  --new-grain-dir: down;
+}
+
+.new-grain-canvas,
+.new-grain-fallback {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  image-rendering: pixelated;
+  opacity: calc(0.448 * 0.8);
+}
+.new-grain-information {
+  isolation: isolate;
+}
+.new-grain-surface {
+  isolation: isolate;
+}
+.new-grain-surface::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--new-grain-ink);
+  mask-image: var(--new-grain-image);
+  mask-size: var(--new-grain-width) var(--new-grain-height);
+  mask-position: var(--new-grain-x, 0px) var(--new-grain-y, 0px);
+  mask-repeat: repeat;
+  image-rendering: pixelated;
+  opacity: var(--new-grain-alpha);
+}
+#questions-drawer.new-grain-surface::after {
+  mask-position: 0 0;
+  mask-repeat: no-repeat;
+  opacity: calc(var(--new-grain-alpha) * 0.5);
+}
+.new-grain-fallback {
+  background-color: var(--new-grain-ink);
+  mask-image:
+    var(--new-grain-image),
+    linear-gradient(to bottom, var(--new-grain-mask-start), var(--new-grain-mask-end));
+  mask-composite: intersect;
+}
+
+.new-grain-fallback-active .new-grain-surface::after {
+  mask-image:
+    var(--new-grain-image),
+    linear-gradient(to bottom, var(--new-grain-mask-start), var(--new-grain-mask-end));
+  mask-composite: intersect;
+}

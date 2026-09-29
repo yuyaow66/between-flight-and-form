@@ -1,0 +1,871 @@
+#interviews #conversation-sheet,
+#interviews .generations,
+#interviews #everyday-care {
+  --new-paper: #f2ede3;
+  --new-ink: #182d3b;
+  --new-red: #b41a23;
+  --new-secondary: #58616a;
+  --new-rule: #c7c1b7;
+
+  color: var(--new-ink);
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible;
+  min-width: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+#interviews #conversation-sheet :is(p, .personal-answer),
+#interviews .generations p,
+#interviews #everyday-care p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0;
+  color: var(--new-ink);
+}
+#interviews .generations #generations-title,
+#interviews #everyday-care #care-title {
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+
+  color: var(--new-ink) !important;
+  overflow-wrap: normal;
+  overflow: visible;
+  box-sizing: border-box;
+  padding-inline: 0.12em;
+}
+#interviews .generations #generations-title em,
+#interviews #everyday-care #care-title em {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: var(--new-red) !important;
+}
+#interviews #conversation-sheet {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(26px, 5vw, 66px) clamp(24px, 3.2vw, 40px);
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--new-ink);
+  scroll-margin-top: 42px;
+}
+#interviews #conversation-sheet .conversation-timeline {
+  margin: 0;
+  padding: 0;
+}
+#interviews #conversation-sheet .conversation-timeline::before,
+#interviews #conversation-sheet :is(.memory-opening, .sheet-question)::before {
+  content: none;
+  display: none;
+}
+#interviews #conversation-sheet .memory-opening {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: 8%;
+  align-items: center;
+  margin: 0 0 clamp(76px, 8vw, 125px);
+  padding: 0;
+}
+#interviews #conversation-sheet .memory-opening .sheet-heading {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  max-width: none;
+  padding: 24px 0 20px;
+}
+#interviews #conversation-sheet .sheet-caption {
+  display: block;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--new-secondary);
+}
+#interviews #conversation-sheet #conversation-name {
+  font-size: clamp(52px, 7.2vw, 96px) !important;
+  line-height: 1.07 !important;
+  color: var(--new-ink);
+  letter-spacing: -0.06em;
+  margin: 22px 0 12px;
+  text-transform: none;
+  overflow: visible;
+  padding-inline: 0.1em;
+  max-width: 100%;
+}
+#interviews #conversation-sheet .memory-opening :is(.mother-memory, .grandmother-memory) {
+  grid-column: 1;
+  grid-row: 1;
+  width: 76%;
+  max-width: 320px;
+  justify-self: center;
+  margin: 0;
+  transform: none;
+}
+#interviews #conversation-sheet .sheet-questions {
+  display: block;
+}
+#interviews #conversation-sheet .sheet-question {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0 3%;
+  align-items: start;
+  margin: 0;
+  padding: 0 0 clamp(86px, 10vw, 150px);
+  border: 0;
+}
+#interviews #conversation-sheet .question-dot {
+  display: none;
+}
+#interviews #conversation-sheet .sheet-question .memory-copy {
+  grid-column: 1 / span 7;
+  grid-row: 1;
+  padding: 0;
+  min-width: 0;
+  max-width: 65ch;
+}
+#interviews #conversation-sheet .sheet-question h3 {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  letter-spacing: -0.025em;
+  color: var(--new-red);
+  margin: 0 0 26px;
+  max-width: 26ch;
+}
+#interviews #conversation-sheet .personal-answer {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--new-ink);
+  margin: 0;
+  white-space: pre-line;
+}
+#interviews #conversation-sheet .sheet-question :is(.mother-memory, .grandmother-memory) {
+  grid-column: 9 / span 4;
+  grid-row: 1;
+  align-self: start;
+  justify-self: stretch;
+  width: 100%;
+  max-width: none;
+  margin: clamp(24px, 4vw, 60px) 0 0;
+  transform: none;
+}
+#interviews #conversation-sheet :is(.mother-memory, .grandmother-memory) img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  clip-path: none;
+  mask: none;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  filter: none;
+  box-shadow: none;
+}
+#interviews #conversation-sheet .sheet-question:nth-child(even) .memory-copy {
+  grid-column: 7 / span 6;
+}
+#interviews
+  #conversation-sheet
+  .sheet-question:nth-child(even)
+  :is(.mother-memory, .grandmother-memory) {
+  grid-column: 1 / span 5;
+  justify-self: stretch;
+  width: 100%;
+  max-width: none;
+  margin-top: 12px;
+  transform: none;
+}
+#interviews #conversation-sheet .sheet-question:nth-child(3) .memory-copy {
+  grid-column: 2 / span 6;
+}
+#interviews
+  #conversation-sheet
+  .sheet-question:nth-child(3)
+  :is(.mother-memory, .grandmother-memory) {
+  grid-column: 9 / span 4;
+  width: 100%;
+}
+#interviews #conversation-sheet .sheet-question:last-child {
+  padding-bottom: 60px;
+}
+#interviews #conversation-sheet .sheet-compare {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  padding: 10px 0;
+  color: var(--new-red);
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+#interviews #conversation-sheet[data-person='grandmother'] .memory-opening {
+  display: block;
+  margin-bottom: 70px;
+}
+#interviews #conversation-sheet[data-person='grandmother'] .memory-opening .sheet-heading {
+  max-width: 940px;
+  padding-top: 0;
+}
+#interviews #conversation-sheet[data-person='grandmother'] .sheet-question .memory-copy {
+  grid-column: 7 / span 6;
+  padding-top: 34px;
+}
+#interviews #conversation-sheet[data-person='grandmother'] .sheet-question .grandmother-memory {
+  grid-column: 1 / span 5;
+  max-width: 390px;
+  justify-self: center;
+  margin-top: 0;
+}
+#interviews
+  #conversation-sheet[data-person='grandmother']
+  .sheet-question:nth-child(even)
+  .grandmother-memory {
+  grid-column: 8 / span 5;
+}
+#interviews
+  #conversation-sheet[data-person='grandmother']
+  .sheet-question:nth-child(3)
+  .grandmother-memory {
+  grid-column: 2 / span 4;
+}
+#interviews #conversation-sheet:is([data-person='aunt-1'], [data-person='aunt-2']) .memory-opening {
+  display: block;
+}
+#interviews
+  #conversation-sheet:is([data-person='aunt-1'], [data-person='aunt-2'])
+  .memory-opening
+  .sheet-heading {
+  max-width: 850px;
+}
+#interviews
+  #conversation-sheet:is([data-person='aunt-1'], [data-person='aunt-2'])
+  .sheet-question
+  .memory-copy {
+  grid-column: 2 / span 9;
+  max-width: 70ch;
+}
+#interviews #conversation-sheet:is([data-person='aunt-1'], [data-person='aunt-2']) .sheet-question {
+  padding-bottom: 50px;
+}
+
+#interviews .generations {
+  position: relative;
+  max-width: 1280px;
+  margin: clamp(100px, 12vw, 180px) auto 0;
+  padding: clamp(55px, 7vw, 100px) clamp(24px, 3.2vw, 40px) 0;
+}
+#interviews .generations #generations-title {
+  max-width: min(100%, 11ch);
+  font-size: clamp(48px, 6vw, 80px);
+  margin-bottom: clamp(55px, 7vw, 100px);
+}
+#interviews .generations .question-comparisons {
+  display: block;
+  margin: 0;
+}
+#interviews .generations .comparison {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+  gap: 6%;
+  padding: 38px 0 62px;
+  margin: 0;
+  border: 0 !important;
+}
+#interviews .generations .comparison h3 {
+  color: var(--new-red);
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  letter-spacing: -0.025em;
+  min-height: 0;
+  max-width: 24ch;
+  margin: 0;
+}
+#interviews .generations .comparison-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px 7%;
+  align-items: start;
+}
+#interviews .generations .comparison-answer {
+  min-width: 0;
+  margin: 0;
+}
+#interviews .generations .comparison-answer h4 {
+  margin: 0 0 14px;
+  color: var(--new-secondary);
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.015em;
+}
+#interviews .generations .comparison-answer p {
+  margin: 0;
+  color: var(--new-ink);
+}
+#interviews .generations .comparison-answer:nth-child(n + 3) p {
+  color: var(--new-secondary);
+}
+
+#interviews #everyday-care {
+  position: relative;
+  max-width: 1280px;
+  margin: clamp(80px, 11vw, 150px) auto 0;
+  padding: clamp(55px, 7vw, 100px) clamp(24px, 3.2vw, 40px) clamp(100px, 12vw, 170px);
+  color: var(--new-ink);
+}
+#interviews #everyday-care .care-heading {
+  display: block;
+  margin: 0 0 75px;
+}
+#interviews #everyday-care #care-title {
+  max-width: min(100%, 13ch);
+  font-size: clamp(48px, 6.5vw, 86px);
+}
+#interviews #everyday-care .care-objects {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 42px 3%;
+  align-items: start;
+  margin: 0;
+}
+#interviews #everyday-care .care-objects article {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+#interviews #everyday-care .care-objects article:first-child {
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 2;
+  padding-right: 8%;
+}
+#interviews #everyday-care .care-objects article:nth-child(2) {
+  grid-column: 9 / span 4;
+  grid-row: 1;
+}
+#interviews #everyday-care .care-objects article:nth-child(3) {
+  grid-column: 9 / span 4;
+  grid-row: 2;
+}
+#interviews #everyday-care .care-objects h3 {
+  font-size: clamp(29px, 2.8vw, 38px) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.035em;
+  color: var(--new-ink);
+  margin: 0 0 23px;
+}
+#interviews #everyday-care .care-objects article:first-child h3 {
+  font-size: clamp(40px, 4.2vw, 58px);
+  max-width: 14ch;
+  color: var(--new-red);
+}
+#interviews #everyday-care .care-objects p {
+  max-width: 55ch;
+  margin: 0;
+}
+
+html[data-theme='dark'] #interviews #conversation-sheet,
+html[data-theme='dark'] #interviews .generations,
+html[data-theme='dark'] #interviews #everyday-care {
+  --new-paper: #182127;
+  --new-ink: #f2ede3;
+  --new-red: #d45a58;
+  --new-secondary: #bcbdb8;
+  --new-rule: #4b5255;
+}
+
+@media (max-width: 1000px) {
+  #interviews #conversation-sheet .memory-opening {
+    gap: 6%;
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+  #interviews .generations .comparison {
+    display: block;
+  }
+  #interviews .generations .comparison h3 {
+    max-width: 36ch;
+    margin-bottom: 32px;
+  }
+  #interviews .generations .comparison-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px 7%;
+  }
+  #interviews #everyday-care .care-objects article:first-child {
+    grid-column: 1 / span 6;
+    padding-right: 3%;
+  }
+  #interviews #everyday-care .care-objects article:nth-child(n + 2) {
+    grid-column: 8 / span 5;
+  }
+}
+
+@media (max-width: 760px) {
+  #interviews #conversation-sheet {
+    padding-inline: 16px;
+    scroll-margin-top: 22px;
+  }
+  #interviews #conversation-sheet .memory-opening {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  #interviews #conversation-sheet .memory-opening .sheet-heading {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+  }
+  #interviews #conversation-sheet #conversation-name {
+    font-size: clamp(45px, 9.5vw, 70px) !important;
+    margin-top: 18px;
+  }
+  #interviews #conversation-sheet .memory-opening :is(.mother-memory, .grandmother-memory) {
+    grid-column: 1;
+    grid-row: 2;
+    width: 58%;
+    max-width: 290px;
+    justify-self: end;
+    margin-right: 5%;
+  }
+  #interviews #conversation-sheet .sheet-question,
+  #interviews
+    #conversation-sheet:is([data-person='mother'], [data-person='grandmother'])
+    .sheet-question {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 72px;
+  }
+  #interviews #conversation-sheet .sheet-question .memory-copy,
+  #interviews #conversation-sheet[data-person] .sheet-question .memory-copy {
+    order: 0;
+    width: 100%;
+    padding-top: 0;
+  }
+  #interviews #conversation-sheet .sheet-question h3 {
+    max-width: 29ch;
+    margin-bottom: 22px;
+  }
+  #interviews #conversation-sheet .sheet-question :is(.mother-memory, .grandmother-memory),
+  #interviews
+    #conversation-sheet[data-person]
+    .sheet-question
+    :is(.mother-memory, .grandmother-memory) {
+    order: 1;
+    align-self: flex-end;
+    width: 88%;
+    max-width: 450px;
+    margin: 0;
+  }
+  #interviews
+    #conversation-sheet
+    .sheet-question:nth-child(even)
+    :is(.mother-memory, .grandmother-memory),
+  #interviews
+    #conversation-sheet[data-person='grandmother']
+    .sheet-question:nth-child(even)
+    .grandmother-memory {
+    align-self: flex-start;
+  }
+  #interviews #conversation-sheet .sheet-question .memory-portrait,
+  #interviews #conversation-sheet[data-person='grandmother'] .sheet-question .grandmother-memory {
+    width: 68%;
+    max-width: 320px;
+  }
+  #interviews #conversation-sheet[data-person='grandmother'] .memory-opening {
+    margin-bottom: 58px;
+  }
+  #interviews #conversation-sheet .sheet-compare {
+    margin-left: 0;
+    max-width: 29ch;
+  }
+  #interviews #conversation-sheet :is(p, .personal-answer),
+  #interviews .generations p,
+  #interviews #everyday-care p {
+    font-size: 17px !important;
+  }
+  #interviews .generations {
+    margin-top: 80px;
+    padding-top: 54px;
+    padding-inline: 16px;
+  }
+  #interviews .generations #generations-title {
+    font-size: clamp(44px, 9vw, 64px);
+    margin-bottom: 42px;
+  }
+  #interviews .generations .comparison {
+    padding: 28px 0 45px;
+  }
+  #interviews .generations .comparison h3 {
+    margin-bottom: 29px;
+  }
+  #interviews .generations .comparison-grid {
+    display: block;
+  }
+  #interviews .generations .comparison-answer {
+    margin-bottom: 30px;
+  }
+  #interviews .generations .comparison-answer:last-child {
+    margin-bottom: 0;
+  }
+  #interviews .generations .comparison-answer h4 {
+    margin-bottom: 10px;
+  }
+  #interviews #everyday-care {
+    margin-top: 54px;
+    padding-top: 52px;
+    padding-bottom: 80px;
+    padding-inline: 16px;
+  }
+  #interviews #everyday-care .care-heading {
+    margin-bottom: 40px;
+  }
+  #interviews #everyday-care #care-title {
+    font-size: clamp(44px, 10vw, 65px);
+  }
+  #interviews #everyday-care .care-objects {
+    display: block;
+  }
+  #interviews #everyday-care .care-objects article,
+  #interviews #everyday-care .care-objects article:first-child {
+    padding: 0;
+    margin-bottom: 43px;
+    max-width: 100%;
+  }
+  #interviews #everyday-care .care-objects article:last-child {
+    margin-bottom: 0;
+  }
+  #interviews #everyday-care .care-objects article:first-child h3 {
+    font-size: 42px;
+  }
+  #interviews #everyday-care .care-objects article:nth-child(n + 2) {
+    margin-left: 7%;
+  }
+}
+@media (max-width: 700px) {
+  #interviews #conversation-sheet {
+    padding-top: 30px;
+  }
+}
+
+#interviews #conversation-sheet .new-interview-meta {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--new-secondary);
+  margin: 14px 0 24px;
+}
+#interviews
+  #conversation-sheet
+  .sheet-question:nth-child(odd)
+  :is(.mother-memory, .grandmother-memory) {
+  transform: rotate(-0.8deg);
+}
+#interviews
+  #conversation-sheet
+  .sheet-question:nth-child(even)
+  :is(.mother-memory, .grandmother-memory) {
+  transform: rotate(1.1deg);
+}
+#interviews :is(.generations, #everyday-care) .chapter-folio {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  position: absolute;
+  top: 24px;
+  left: clamp(24px, 3.2vw, 40px);
+  right: auto;
+  color: var(--new-secondary);
+}
+
+#interviews #conversation-sheet :is(.sheet-heading, .memory-copy),
+#interviews .generations :is(.comparison, .comparison-grid, .comparison-answer),
+#interviews #everyday-care :is(.care-heading, .care-objects, .care-objects article) {
+  min-width: 0;
+  overflow: visible;
+}
+#interviews #conversation-sheet :is(h3, p, a),
+#interviews .generations :is(h3, h4, p),
+#interviews #everyday-care :is(h3, p) {
+  overflow-wrap: break-word;
+}
+@media (max-width: 760px) {
+  #interviews :is(.generations, #everyday-care) .chapter-folio {
+    left: 16px;
+  }
+}
+
+#interviews #conversation-sheet[data-person] .conversation-timeline {
+  display: grid;
+  grid-template-columns: repeat(100, minmax(0, 1fr));
+  align-items: start;
+  overflow: visible;
+}
+#interviews
+  #conversation-sheet[data-person]
+  :is(.memory-opening, .sheet-questions, .sheet-question) {
+  display: contents;
+}
+#interviews #conversation-sheet[data-person] .sheet-heading {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  margin-bottom: 56px;
+}
+#interviews #conversation-sheet[data-person='mother'] .mother-memory,
+#interviews #conversation-sheet[data-person='mother'] .sheet-question:nth-child(n) .mother-memory {
+  position: relative;
+  grid-row: 2;
+  align-self: start;
+  justify-self: stretch;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  transform: none;
+  overflow: visible;
+  border: 0;
+  box-shadow: none;
+}
+#interviews #conversation-sheet[data-person='mother'] .memory-opening .mother-memory {
+  grid-column: 1 / 56;
+}
+#interviews #conversation-sheet[data-person='mother'] .sheet-question:nth-child(1) .mother-memory {
+  grid-column: 77 / 97;
+}
+#interviews #conversation-sheet[data-person='mother'] .sheet-question:nth-child(2) .mother-memory {
+  grid-column: 51 / 75;
+  margin-top: clamp(130px, 19vw, 270px);
+  z-index: 1;
+}
+#interviews #conversation-sheet[data-person='mother'] .sheet-question:nth-child(3) .mother-memory {
+  grid-column: 79 / 99;
+  margin-top: clamp(270px, 36vw, 510px);
+}
+#interviews #conversation-sheet[data-person='mother'] .sheet-question:nth-child(4) .mother-memory {
+  grid-column: 62 / 78;
+  margin-top: clamp(420px, 49vw, 700px);
+}
+#interviews #conversation-sheet[data-person='mother'] .mother-memory > img {
+  display: block;
+  filter: saturate(0.85);
+}
+#interviews #conversation-sheet[data-person] .sheet-question .memory-copy {
+  grid-column: 6 / 96;
+  grid-row: auto;
+  width: 100%;
+  max-width: calc(648px + clamp(40px, 6vw, 88px));
+  justify-self: center;
+  margin: 84px 0 0;
+  padding: 0 0.2em;
+  box-sizing: border-box;
+}
+#interviews #conversation-sheet[data-person] .personal-answer {
+  columns: 2;
+  column-gap: clamp(40px, 6vw, 88px);
+  line-height: 1.8;
+}
+#interviews #conversation-sheet :is(.new-aunt-memory, .new-memory-placeholder) {
+  display: none;
+}
+#interviews #conversation-sheet[data-person] .sheet-question:nth-child(n) .grandmother-memory,
+#interviews #conversation-sheet[data-person] :is(.new-aunt-memory, .new-memory-placeholder) {
+  position: relative;
+  grid-row: 2;
+  align-self: start;
+  justify-self: stretch;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  transform: none;
+  overflow: visible;
+  border: 0;
+  box-shadow: none;
+}
+#interviews
+  #conversation-sheet[data-person='grandmother']
+  .sheet-question:nth-child(1)
+  .grandmother-memory {
+  grid-column: 1 / 56;
+}
+#interviews
+  #conversation-sheet[data-person='grandmother']
+  .sheet-question:nth-child(2)
+  .grandmother-memory {
+  grid-column: 79 / 93;
+}
+#interviews
+  #conversation-sheet[data-person='grandmother']
+  .sheet-question:nth-child(3)
+  .grandmother-memory {
+  grid-column: 52 / 70;
+  margin-top: clamp(130px, 19vw, 270px);
+  z-index: 1;
+}
+#interviews
+  #conversation-sheet[data-person='grandmother']
+  .sheet-question:nth-child(4)
+  .grandmother-memory {
+  grid-column: 79 / 99;
+  margin-top: clamp(340px, 43vw, 610px);
+}
+#interviews #conversation-sheet[data-person='aunt-1'] .new-aunt-memory[data-for='aunt-1'],
+#interviews #conversation-sheet[data-person='aunt-2'] .new-aunt-memory[data-for='aunt-2'] {
+  display: block;
+  grid-column: 1 / 56;
+}
+#interviews #conversation-sheet[data-person='aunt-2'] .new-memory-placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--new-rule);
+  color: var(--new-secondary);
+  box-sizing: border-box;
+}
+#interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo='2'] {
+  grid-column: 79 / 93;
+}
+#interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo='3'] {
+  grid-column: 52 / 70;
+  margin-top: clamp(130px, 19vw, 270px);
+  z-index: 1;
+}
+#interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo='4'] {
+  grid-column: 78 / 98;
+  margin-top: clamp(280px, 39vw, 560px);
+}
+#interviews #conversation-sheet[data-person='aunt-1'] .--new-aunt-photo[data-photo='2'] {
+  grid-column: 73 / 93;
+}
+#interviews #conversation-sheet[data-person='aunt-1'] .--new-aunt-photo[data-photo='3'] {
+  grid-column: 52 / 77;
+}
+#interviews #conversation-sheet[data-person='aunt-1'] .--new-aunt-photo[data-photo='4'] {
+  grid-column: 70 / 98;
+}
+#interviews #conversation-sheet[data-person] :is(.grandmother-memory, .new-aunt-memory) > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: saturate(0.85);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+@media (max-width: 760px) {
+  #interviews #conversation-sheet[data-person] .sheet-heading {
+    margin-bottom: 40px;
+  }
+  #interviews #conversation-sheet[data-person='mother'] .memory-opening .mother-memory {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  #interviews
+    #conversation-sheet[data-person='mother']
+    .sheet-question:nth-child(n)
+    .mother-memory {
+    grid-column: 41 / -1;
+    margin: 48px 0 0;
+    width: 100%;
+    max-width: none;
+  }
+  #interviews
+    #conversation-sheet[data-person='mother']
+    .sheet-question:nth-child(1)
+    .mother-memory {
+    grid-column: 33 / -1;
+    grid-row: 3;
+  }
+  #interviews
+    #conversation-sheet[data-person='mother']
+    .sheet-question:nth-child(2)
+    .mother-memory {
+    grid-column: 1 / 69;
+    grid-row: 4;
+    margin-top: 64px;
+  }
+  #interviews
+    #conversation-sheet[data-person='mother']
+    .sheet-question:nth-child(3)
+    .mother-memory {
+    grid-row: 5;
+  }
+  #interviews
+    #conversation-sheet[data-person='mother']
+    .sheet-question:nth-child(4)
+    .mother-memory {
+    grid-column: 1 / 61;
+    grid-row: 6;
+    margin-top: 72px;
+  }
+  #interviews #conversation-sheet[data-person] .sheet-question .memory-copy {
+    grid-column: 1 / -1;
+    margin-top: 64px;
+  }
+  #interviews #conversation-sheet[data-person] .personal-answer {
+    columns: 1;
+  }
+  #interviews
+    #conversation-sheet[data-person='grandmother']
+    .sheet-question:nth-child(n)
+    .grandmother-memory {
+    width: 100%;
+    max-width: none;
+    grid-column: 41 / -1;
+    margin: 48px 0 0;
+  }
+  #interviews
+    #conversation-sheet[data-person='grandmother']
+    .sheet-question:nth-child(1)
+    .grandmother-memory {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+  }
+  #interviews
+    #conversation-sheet[data-person='grandmother']
+    .sheet-question:nth-child(2)
+    .grandmother-memory {
+    grid-row: 3;
+  }
+  #interviews
+    #conversation-sheet[data-person='grandmother']
+    .sheet-question:nth-child(3)
+    .grandmother-memory {
+    grid-column: 1 / 61;
+    grid-row: 4;
+    margin-top: 64px;
+  }
+  #interviews
+    #conversation-sheet[data-person='grandmother']
+    .sheet-question:nth-child(4)
+    .grandmother-memory {
+    grid-row: 5;
+  }
+  #interviews #conversation-sheet[data-person^='aunt-'] .new-aunt-memory[data-for] {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  #interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo] {
+    grid-column: 41 / -1;
+    margin-top: 48px;
+  }
+  #interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo='2'] {
+    grid-row: 3;
+  }
+  #interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo='3'] {
+    grid-column: 1 / 61;
+    grid-row: 4;
+    margin-top: 64px;
+  }
+  #interviews #conversation-sheet[data-person^='aunt-'] :is(.new-memory-placeholder, .--new-aunt-photo)[data-photo='4'] {
+    grid-row: 5;
+  }
+  #interviews #conversation-sheet[data-person='aunt-1'] .--new-aunt-photo[data-photo] {
+    grid-column: 25 / -1;
+  }
+  #interviews #conversation-sheet[data-person='aunt-1'] .--new-aunt-photo[data-photo='3'] {
+    grid-column: 1 / 77;
+  }
+}

@@ -1,0 +1,22 @@
+.interview-text-rain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  pointer-events: none;
+}
+.interview-text-rain[hidden] {
+  display: none;
+}
+#conversation-sheet .text-rain-playing {
+  opacity: 0 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .interview-text-rain {
+    display: none;
+  }
+  #conversation-sheet .text-rain-playing {
+    opacity: 1 !important;
+  }
+}

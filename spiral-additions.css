@@ -1,0 +1,45 @@
+.new-spiral-definitions {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+#interviews {
+  position: relative;
+}
+#interviews .new-family-underlay {
+  position: absolute;
+  inset: 0;
+  overflow: clip;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+#interviews .new-family-glyph {
+  position: absolute;
+  top: 24px;
+  right: 5%;
+  font:
+    normal 400 min(60vw, 640px)/1.2 'PingFang ShaoHua',
+    serif;
+  color: #d9e1e4;
+  opacity: 0.4;
+  transform: translateY(var(--new-family-parallax, 0px));
+  pointer-events: none;
+  animation: none;
+  transition: none;
+}
+#interviews .spiral-collage [data-person='grandmother'] > :is(img, .mosaic-overlay) {
+  clip-path: url(#new-portrait-grandmother);
+}
+#interviews .spiral-collage [data-person='mother'] > :is(img, .mosaic-overlay) {
+  clip-path: url(#new-portrait-mother);
+}
+#interviews .spiral-collage [data-person='aunt-1'] > :is(img, .mosaic-overlay) {
+  clip-path: url(#new-portrait-aunt-1);
+}
+#interviews .spiral-collage [data-person='aunt-2'] > :is(img, .mosaic-overlay) {
+  clip-path: url(#new-portrait-aunt-2);
+}
+#interviews .--new-oval-portraits [data-person] > img {
+  aspect-ratio: 3 / 4;
+}

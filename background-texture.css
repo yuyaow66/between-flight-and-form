@@ -1,0 +1,32 @@
+:root {
+  --background-grain-soft: url('assets/background-grain-soft.svg?v=56');
+  --background-grain-ink: url('assets/background-grain-ink.svg?v=56');
+  --background-grain-blend: soft-light, multiply;
+  --background-grain-size: 192px;
+  --background-grain-secondary-size: 154px;
+}
+
+html[data-theme='dark'] {
+  --background-grain-soft: url('assets/background-grain-soft-dark.svg?v=56');
+  --background-grain-ink: url('assets/background-grain-light-dark.svg?v=56');
+  --background-grain-blend: soft-light, screen;
+}
+
+html :is(.about-drawer, .drawer-header) {
+  background-image: var(--background-grain-soft), var(--background-grain-ink) !important;
+  background-size:
+    var(--background-grain-size) var(--background-grain-size),
+    var(--background-grain-secondary-size) var(--background-grain-secondary-size) !important;
+  background-position:
+    0 0,
+    83px 127px !important;
+  background-repeat: repeat !important;
+  background-blend-mode: var(--background-grain-blend);
+}
+
+html .theme-bar {
+  background-color: var(--editorial-paper, #fafaf6);
+}
+html[data-theme='dark'] .theme-bar {
+  background-color: #151218;
+}

@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'PP Lettra Mono';
+  src: url('assets/fonts/PPLettraMono-UltralightItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+}
+:root {
+  --font-body: 'PP Lettra Mono', 'Courier New', monospace;
+}
+html body {
+  font-family: var(--font-body);
+  font-weight: 100;
+  font-style: italic;
+}
+
+html
+  body
+  :is(
+    p:not(.desk-note),
+    li,
+    blockquote,
+    figcaption,
+    summary,
+    input,
+    textarea,
+    select,
+    button,
+    .cover,
+    .caption,
+    .scroll-caption,
+    .sheet-caption,
+    .theme-state,
+    .theme-context,
+    .transcript-note,
+    .personal-answer,
+    .interview-pending,
+    .reflection-details,
+    .comparison h3,
+    .comparison-answer h4,
+    .sheet-question h3,
+    .film-number,
+    .expectation-words,
+    .expectation-words span,
+    .drawer-content,
+    .flight-information,
+    .scroll-invitation,
+    .interviews-back,
+    .films-back,
+    .sheet-compare,
+    .fish-controls
+  ) {
+  font-family: var(--font-body) !important;
+  font-weight: 100 !important;
+  font-style: italic !important;
+}
+html body :is(.cover, .personal-answer, .interviews-intro, .comparison-answer p, .transcript-note) {
+  font-style: italic;
+}
+
+html body .fish-controls .fish-status {
+  font-size: 20px;
+}
+html body .fish-controls .fish-reset {
+  font-size: 19px;
+}
+html body a.scroll-invitation > span:first-child {
+  font-size: 28px;
+}
