@@ -202,37 +202,3 @@
     });
   });
 })();
-
-(() => {
-  const frames = [...document.querySelectorAll('.film-still, [data-new-parallax]')]
-    .filter((element) => !element.closest('#interviews'))
-    .map((element) => ({ element, y: 0 }));
-  if (!frames.length) return;
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  let frame = 0;
-  frames.forEach((item) => item.element.classList.add('new-parallax-frame'));
-  function update() {
-    frame = 0;
-    frames.forEach((item) => {
-      const rect = item.element.getBoundingClientRect();
-      const top = rect.top - item.y;
-      const progress = Math.max(
-        0,
-        Math.min(1, (innerHeight - top) / Math.max(1, innerHeight + rect.height)),
-      );
-      item.y = motion.matches ? 0 : (progress - 0.5) * 24;
-      item.element.style.setProperty('--new-parallax-y', `${item.y.toFixed(2)}px`);
-    });
-  }
-  function schedule() {
-    if (!frame) frame = requestAnimationFrame(update);
-  }
-  addEventListener('scroll', schedule, { passive: true });
-  addEventListener('resize', schedule);
-  addEventListener('load', schedule);
-  addEventListener('pageshow', schedule);
-  document.addEventListener('toggle', schedule, true);
-  motion.addEventListener('change', schedule);
-  document.fonts?.ready.then(schedule);
-  update();
-})();

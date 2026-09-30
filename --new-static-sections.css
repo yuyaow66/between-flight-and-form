@@ -8,3 +8,7 @@
   transform: rotate(var(--portrait-tilt));
   translate: none;
 }
+
+.--new-no-entry-motion[open] {
+  animation: none !important;
+}

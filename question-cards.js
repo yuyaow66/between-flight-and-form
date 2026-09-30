@@ -7,7 +7,6 @@
   const nav = drawer.querySelector('.questions-nav');
   const flipper = reader.querySelector('.question-flipper');
   const flip = reader.querySelector('[data-flip-question]');
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const palettes = ['#f7efe2', '#e5e9f3', '#f2dfe0', '#e5eddd'];
   let stageIndex = 0,
     questionIndex = 0,
@@ -106,19 +105,6 @@
       float.append(card);
       arrival.append(float);
       field.append(arrival);
-      if (!motion.matches)
-        arrival.animate(
-          [
-            { opacity: 0, transform: 'translate(70px,100px) scale(.72)' },
-            { opacity: 1, transform: 'none' },
-          ],
-          {
-            duration: 650,
-            delay: Math.min(i, 8) * 45,
-            easing: 'cubic-bezier(.2,.7,.2,1)',
-            fill: 'backwards',
-          },
-        );
     });
   }
   questionStages.forEach((stage, i) => {
