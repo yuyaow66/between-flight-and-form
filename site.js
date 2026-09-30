@@ -202,51 +202,6 @@ setInterval(tick, 1000);
 })();
 
 (() => {
-  const rail = document.querySelector('.fish-silhouette-rail');
-  if (!rail) return;
-  const fish = rail.querySelector('span');
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  let frame = 0;
-  function swim() {
-    frame = 0;
-    const travel = Math.max(1, document.documentElement.scrollHeight - innerHeight);
-    const progress = Math.max(0, Math.min(1, scrollY / travel));
-    const tilt = (7 * Math.PI) / 180;
-    const width = fish.offsetWidth;
-    const height = fish.offsetHeight;
-    const insetX = (height * Math.cos(tilt) + width * Math.sin(tilt)) / 2 + 12;
-    const insetY = (width * Math.cos(tilt) + height * Math.sin(tilt)) / 2 + 12;
-    const interviewChapter = document.querySelector('#interviews');
-    if (interviewChapter) {
-      const chapterRect = interviewChapter.getBoundingClientRect();
-      const spiralRect = interviewChapter.querySelector('.spiral-collage').getBoundingClientRect();
-      rail.dataset.newOutside = String(spiralRect.bottom <= 0 || chapterRect.top >= innerHeight);
-    }
-    rail.style.setProperty('--fish-left', `${insetX}px`);
-    rail.style.setProperty(
-      '--fish-top',
-      `${insetY + progress * Math.max(0, innerHeight - insetY * 2)}px`,
-    );
-    rail.style.setProperty(
-      '--fish-sway',
-      `${motion.matches ? 0 : Math.sin(scrollY / 110) * (innerWidth < 650 ? 1 : 3)}px`,
-    );
-    rail.style.setProperty(
-      '--fish-angle',
-      `${90 + (motion.matches ? 0 : Math.sin(scrollY / 140) * 7)}deg`,
-    );
-  }
-  function schedule() {
-    if (!frame) frame = requestAnimationFrame(swim);
-  }
-  addEventListener('scroll', schedule, { passive: true });
-  addEventListener('resize', schedule);
-  addEventListener('load', schedule);
-  motion.addEventListener('change', schedule);
-  swim();
-})();
-
-(() => {
   const buttons = [...document.querySelectorAll('.portrait-window')];
   const name = document.querySelector('#conversation-name');
   const sheet = document.querySelector('#conversation-sheet');
