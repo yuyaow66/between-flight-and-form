@@ -130,6 +130,7 @@ setInterval(tick, 1000);
   const items = [];
   function add(selector, direction) {
     section.querySelectorAll(selector).forEach((el) => {
+      if (el.closest('.--new-static-motion')) return;
       el.classList.add('scroll-text');
       items.push({ el, direction, top: 0, y: 0 });
     });
@@ -140,12 +141,14 @@ setInterval(tick, 1000);
   const directions = ['left', 'bottom', 'right'];
   section.querySelectorAll('.interview-person').forEach((card, i) => {
     card.querySelectorAll('.interview-number,h2,.interview-pending').forEach((el) => {
+      if (el.closest('.--new-static-motion')) return;
       el.classList.add('scroll-text');
       if (el.matches('.interview-number')) el.style.display = 'inline-block';
       items.push({ el, direction: directions[i % directions.length], top: 0, y: 0 });
     });
   });
   document.querySelectorAll('[data-reveal]').forEach((el) => {
+    if (el.closest('.--new-static-motion')) return;
     el.classList.add('scroll-text');
     items.push({ el, direction: el.dataset.reveal, top: 0, y: 0 });
   });

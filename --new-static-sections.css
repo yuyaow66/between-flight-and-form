@@ -1,0 +1,10 @@
+.--new-static-motion,
+.--new-static-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+#interviews .spiral-collage.--new-static-motion .portrait-window {
+  transform: rotate(var(--portrait-tilt));
+  translate: none;
+}
