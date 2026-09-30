@@ -4,23 +4,23 @@
   const words = [
     {
       title: 'Being a good girl.',
-      body: 'Be a good girl. Be quiet. Be obedient. Do not talk back. Get good grades. Make your parents proud. Be sensible. Help with the housework. Put others first. Do not make trouble. Smile. Say thank you.',
+      body: 'Your parents work so hard for you. If you got better grades, they wouldn’t have to worry so much. A good girl knows when to stay quiet, even when she thinks something is unfair. Can’t you help your mum instead of making more trouble?',
     },
     {
       title: 'Being looked at.',
-      body: 'Look pretty. Stay thin. Keep your skin fair. Dress modestly. Sit properly. Do not be too loud. Do not date too young. Do not draw attention. Be attractive. But not too attractive. Watch what you wear. What will people think?',
+      body: 'You should make an effort with your looks, but don’t draw too much attention. People will talk if your clothes are too revealing. A girl should know how to sit properly. Why are you speaking so loudly? Have you put on weight?',
     },
     {
-      title: 'Being the right kind of woman.',
-      body: 'Find a stable job. Do not be too ambitious. Be successful. But not intimidating. Find a husband. Get married on time. Do not be too picky. Your clock is ticking. When will you have children? Be independent. But not too independent.',
+      title: 'Choosing a direction.',
+      body: 'A steady job would be better for you. There’s nothing wrong with doing well, but some men don’t like a woman who earns more than they do. You should start thinking about marriage now. If you keep waiting for the perfect person, it may be too late to have children.',
     },
     {
-      title: 'Being everything to everyone.',
-      body: 'Be a good wife. Be a good mother. Put family first. Have another child. Keep the house clean. Take care of your parents. Support your husband. Be patient. Hold it together. Do not complain. You should be able to do it all.',
+      title: 'Making room for others.',
+      body: 'You’ve got a family now, so you can’t just think about yourself. Your husband needs your support. If the house is messy, people will wonder what you do all day. Having another child would be good for the family. Why do you always seem so tired?',
     },
     {
-      title: 'Being needed. Staying useful.',
-      body: 'Act your age. Help raise the grandchildren. Do not be selfish. Do not be a burden. Keep the family together. Stop thinking about yourself. You should be grateful. Stay useful. Do not ask for too much. It is too late to start again.',
+      title: 'Later in life.',
+      body: 'Now that you’re retired, you have time to help with the grandchildren. Your children are busy, so try not to worry them with your problems. Why would you want to start something new at your age? You should be happy with the life you have.',
     },
   ];
   const host = document.createElement('div');
@@ -29,7 +29,7 @@
   instructions.className = 'life-net-instructions';
   instructions.id = 'life-net-instructions';
   instructions.textContent =
-    'Drag the fish or the letters to pull the net. Click to guide the fish. With the canvas focused, use the arrow keys to move the fish. Press Escape to release it.';
+    'Drag the fish or letters to pull the net. You can also click to guide the fish. To use the keyboard, select the artwork and move with the arrow keys. Press Escape to let go.';
   host.append(instructions);
   section.querySelector('.life-layout').append(host);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');

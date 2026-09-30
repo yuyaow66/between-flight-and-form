@@ -88,9 +88,9 @@ setInterval(tick, 1000);
     if (cost && question) {
       cost.textContent = [
         '',
-        'Less time for herself.',
-        'Less room to choose.',
-        'Less of her own voice.',
+        'She has less time for herself.',
+        'There are fewer choices left.',
+        'It gets harder to speak up.',
       ][cuts];
       cost.hidden = cuts === 0;
       question.hidden = cuts !== 3;

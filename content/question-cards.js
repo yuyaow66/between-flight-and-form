@@ -185,11 +185,11 @@ const questionStages = [
       },
       {
         zh: '都这个年纪了，怎么还不知道打扮？',
-        en: 'At your age, shouldn’t you start making an effort with your appearance?',
+        en: 'At your age, shouldn’t you start making more effort with how you look?',
       },
       {
         zh: '你是来上学的，还是来打扮的？',
-        en: 'Are you here to study or to show off your looks?',
+        en: 'Are you here to study or to show off?',
       },
       {
         zh: '你是不是又胖了？',
@@ -217,11 +217,11 @@ const questionStages = [
       },
       {
         zh: '你怎么能喜欢女孩子？',
-        en: 'How can you be attracted to girls?',
+        en: 'How can you like girls?',
       },
       {
         zh: '手机有什么不能让爸妈看的？',
-        en: 'What’s on your phone that your parents aren’t allowed to see?',
+        en: 'What’s on your phone that you can’t show your parents?',
       },
       {
         zh: '晚上出去，女孩子怎么能这么晚回家？',
@@ -237,7 +237,7 @@ const questionStages = [
       },
       {
         zh: '女孩子读师范不是更稳妥吗？',
-        en: 'Wouldn’t teacher training be a safer choice for a girl?',
+        en: 'Wouldn’t it be safer for a girl to become a teacher?',
       },
       {
         zh: '上大学非要去那么远吗？',
@@ -268,7 +268,7 @@ const questionStages = [
       },
       {
         zh: '你读这么多书，会不会更难找对象？',
-        en: 'Won’t all that education make it harder to find a partner?',
+        en: 'Won’t it be harder to find a partner if you study so much?',
       },
       {
         zh: '一定要买自己的房子吗，以后不是要嫁人？',
@@ -280,7 +280,7 @@ const questionStages = [
       },
       {
         zh: '面试时问你婚育计划，不是很正常吗？',
-        en: 'Isn’t it normal for an interviewer to ask about your plans for marriage and children?',
+        en: 'What’s wrong with an interviewer asking when you’ll get married or have children?',
       },
       {
         zh: '你这么忙，怎么照顾家庭？',
@@ -288,7 +288,7 @@ const questionStages = [
       },
       {
         zh: '你挣得比他多，不怕他没面子吗？',
-        en: 'Aren’t you worried he’ll lose face if you earn more than he does?',
+        en: 'Won’t he feel embarrassed if you earn more than he does?',
       },
       {
         zh: '结了婚还分什么你的、他的？',
@@ -347,7 +347,7 @@ const questionStages = [
     questions: [
       {
         zh: '都退休了，怎么还这么忙自己的事？',
-        en: 'You’re retired now. Why are you still so busy with your own interests?',
+        en: 'You’re retired now. Why are you still so busy doing your own things?',
       },
       {
         zh: '你不帮忙带孙辈，孩子们怎么上班？',
@@ -379,7 +379,7 @@ const questionStages = [
       },
       {
         zh: '你再婚，有没有替子女想过？',
-        en: 'Have you thought about your children before deciding to remarry?',
+        en: 'Have you thought about your children before getting married again?',
       },
       {
         zh: '一个人住不孤单吗，为什么不搬去和孩子住？',
@@ -391,15 +391,15 @@ const questionStages = [
       },
       {
         zh: '不舒服就忍忍，何必让孩子担心？',
-        en: 'Can’t you put up with feeling unwell instead of worrying your children?',
+        en: 'Can’t you put up with feeling a bit ill? Why worry your children?',
       },
       {
         zh: '你是不是应该少麻烦孩子一点？',
-        en: 'Shouldn’t you try to be less of a burden on your children?',
+        en: 'Shouldn’t you try to make things easier for your children?',
       },
       {
         zh: '这些事情你又不懂，为什么还要自己决定？',
-        en: 'Why insist on deciding for yourself when you don’t understand these things?',
+        en: 'If you don’t understand these things, why do you have to decide for yourself?',
       },
       {
         zh: '养老金为什么不留着给孩子？',
@@ -411,7 +411,7 @@ const questionStages = [
       },
       {
         zh: '年纪大了，就不能少说两句吗？',
-        en: 'Now that you’re older, can’t you keep your opinions to yourself?',
+        en: 'You’re getting older. Can’t you just keep your thoughts to yourself?',
       },
       {
         zh: '你现在才想去学，会不会太晚了？',
