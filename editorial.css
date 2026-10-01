@@ -740,6 +740,9 @@ html #J3964441023 .--new-content-placeholder:empty {
   html body #J3964441023 :is(#looking-title, #listening-title).--new-conversational-title {
     width: 100%;
   }
+  html body #J3964441023 #looking-title.--new-conversational-title {
+    font-size: clamp(38px, 13vw, 88px);
+  }
   html #J3964441023 #listening-title.--new-conversational-title em {
     font-size: inherit;
   }
