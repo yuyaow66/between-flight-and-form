@@ -4,7 +4,7 @@ html .collage-layout .fish-interaction {
 
 .fish-paper-origin {
   position: absolute;
-  left: 80%;
+  left: var(--paper-origin-x, 80%);
   top: 52%;
   width: 0;
   height: 0;

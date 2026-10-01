@@ -30,7 +30,7 @@
     <link href="paper-labels.css?v=1" rel="stylesheet" />
     <link href="life-net.css?v=2" rel="stylesheet" />
     <link href="fish-tears.css?v=1" rel="stylesheet" />
-    <link href="fish-papers.css?v=1" rel="stylesheet" />
+    <link href="fish-papers.css?v=handwritten-stages-1" rel="stylesheet" />
     <link href="pressure-rain.css?v=flow-3" rel="stylesheet" />
     <link href="editorial.css?v=film-reality-title-3" rel="stylesheet" />
     <link href="editorial-films.css?v=clean-assets-2" rel="stylesheet" />
@@ -43,10 +43,10 @@
     <script defer src="p5-runtime.js?v=1"></script>
     <script defer src="pressure-rain.js?v=flow-3"></script>
     <script defer src="life-net.js?v=plain-english-4"></script>
-    <script defer src="content/question-cards.js?v=plain-english-2"></script>
-    <script defer src="question-cards.js?v=no-card-entry-3"></script>
+    <script defer src="content/question-cards.js?v=handwritten-stages-1"></script>
+    <script defer src="question-cards.js?v=handwritten-stages-1"></script>
     <script defer="" src="site.js?v=plain-english-12"></script>
-    <script defer src="fish-papers.js?v=1"></script>
+    <script defer src="fish-papers.js?v=handwritten-stages-1"></script>
     <link href="home-glass.css?v=organized-1" rel="stylesheet" />
     <script src="home-glass.js?v=organized-1"></script>
     <link href="new-grain.css?v=5-drawer" rel="stylesheet" />
@@ -1402,23 +1402,18 @@ Now that you’re in America, our video calls are the most important time for me
       html[data-theme='dark'] .paper-coverflow .arc-number {
         color: inherit;
       }
-      .paper-coverflow .arc-placeholder {
+      .paper-coverflow .arc-fallback {
         display: grid;
         position: absolute;
         inset: 0;
         place-items: center;
-        font: 14px/1.4 var(--font-body);
+        padding: 18px 24px;
+        background: #f7efe2;
+        font: clamp(12px, 2vw, 18px)/1.4 var(--font-body);
         color: #244b5b;
       }
-      .paper-coverflow .arc-placeholder[hidden] {
+      .paper-coverflow .arc-fallback[hidden] {
         display: none;
-      }
-      .paper-coverflow .arc-placeholder svg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
       }
       .paper-coverflow .arc-instructions {
         position: absolute;
@@ -1463,7 +1458,7 @@ Now that you’re in America, our video calls are the most important time for me
       }
     </style>
     <script id="paper-coverflow-script">
-      window.createPaperCoverflow = function (host, questions, onOpen) {
+      window.createPaperCoverflow = function (host, questions, onOpen, label) {
         const abort = new AbortController();
         const options = { signal: abort.signal };
         const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -1478,9 +1473,8 @@ Now that you’re in America, our video calls are the most important time for me
         host.classList.add('paper-coverflow');
         host.setAttribute('role', 'region');
         host.setAttribute('aria-roledescription', 'carousel');
-        host.setAttribute('aria-label', 'Childhood: 20 handwritten cards');
+        host.setAttribute('aria-label', `${label}: ${count} handwritten cards`);
         const cards = questions.map((question, index) => {
-          const id = `card-${String(index + 1).padStart(2, '0')}`;
           const card = document.createElement('button');
           card.type = 'button';
           card.className = 'arc-card';
@@ -1492,16 +1486,13 @@ Now that you’re in America, our video calls are the most important time for me
           card.tabIndex = -1;
           card.setAttribute('aria-hidden', 'true');
           const img = document.createElement('img');
-          img.dataset.asset = id;
           img.alt = question.en;
           img.draggable = false;
           img.loading = 'eager';
           img.decoding = 'async';
           const placeholder = document.createElement('span');
-          placeholder.className = 'arc-placeholder';
-          placeholder.innerHTML =
-            '<svg viewBox="0 0 400 105" preserveAspectRatio="none" aria-hidden="true"><polygon points="5,12 88,4 198,9 298,3 395,10 390,95 304,101 202,94 107,102 4,93" fill="#ddd" fill-opacity="1" stroke="#777" stroke-opacity=".5" stroke-width="1" stroke-dasharray="5 5" vector-effect="non-scaling-stroke"/></svg>';
-          placeholder.append(document.createTextNode(id));
+          placeholder.className = 'arc-fallback';
+          placeholder.textContent = question.en;
           const fallback = () => {
             img.hidden = true;
             placeholder.hidden = false;

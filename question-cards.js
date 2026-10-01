@@ -53,6 +53,7 @@
     setLanguage(flipper.dataset.language === 'en' ? 'zh' : 'en');
   }
   function openReader(index, card) {
+    if (!questionStages[stageIndex].questions.length) return;
     sourceCard = card;
     showQuestion(index);
     drawer.dataset.reading = 'true';
@@ -73,8 +74,9 @@
     field.setAttribute('aria-label', `${stage.label}: ${stage.questions.length} questions`);
     field.replaceChildren();
     scroller.scrollTop = 0;
-    if (stage.id === 'childhood') {
-      destroyCoverflow = window.createPaperCoverflow(field, stage.questions, openReader);
+    if (!stage.questions.length) return;
+    if (stage.questions.every((question) => question.images?.en && question.images?.zh)) {
+      destroyCoverflow = window.createPaperCoverflow(field, stage.questions, openReader, stage.label);
       field.querySelector('.arc-card[aria-current="true"]')?.focus({ preventScroll: true });
       return;
     }
@@ -124,8 +126,10 @@
     .querySelector('.fish-more')
     .addEventListener('click', (event) => openQuestions(stageIndex, event.currentTarget));
   const fish = document.querySelector('.fish-stage');
-  fish.addEventListener('childhoodquestion', (event) => {
-    stageIndex = questionStages.findIndex((stage) => stage.id === 'childhood');
+  fish.addEventListener('paperquestion', (event) => {
+    const index = questionStages.findIndex((stage) => stage.id === event.detail.stageId);
+    if (index < 0) return;
+    stageIndex = index;
     openReader(event.detail.index, event.detail.source);
   });
   fish.addEventListener('click', (event) => {
