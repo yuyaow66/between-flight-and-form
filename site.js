@@ -130,26 +130,39 @@ setInterval(tick, 1000);
   const source = document.querySelector('#interview-data');
   const interviews = source ? JSON.parse(source.textContent) : {};
   if (!name || !sheet) return;
-  buttons.forEach((button) =>
-    button.addEventListener('click', () => {
-      buttons.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
-      name.textContent = button.dataset.personName;
-      sheet.dataset.person = button.dataset.person;
-      const interview = interviews[button.dataset.person];
-      const note = sheet.querySelector('.sheet-heading p');
-      note.textContent = button.dataset.person === 'mother' ? '' : interview?.note || '';
-      note.hidden = !note.textContent;
-      sheet.querySelectorAll('.personal-answer').forEach((answer, i) => {
-        answer.textContent = interview?.answers?.[i] || '';
-        answer.classList.toggle('has-answer', Boolean(answer.textContent.trim()));
+  let locationPerson;
+  function selectInterview(button, scroll = false) {
+    buttons.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+    name.textContent = button.dataset.personName;
+    sheet.dataset.person = button.dataset.person;
+    const interview = interviews[button.dataset.person];
+    const note = sheet.querySelector('.sheet-heading p');
+    note.textContent = button.dataset.person === 'mother' ? '' : interview?.note || '';
+    note.hidden = !note.textContent;
+    sheet.querySelectorAll('.personal-answer').forEach((answer, i) => {
+      answer.textContent = interview?.answers?.[i] || '';
+      answer.classList.toggle('has-answer', Boolean(answer.textContent.trim()));
+    });
+    window.dispatchEvent(new Event('resize'));
+    if (scroll && (sheet.closest('.spiral-desk') || matchMedia('(max-width:700px)').matches)) {
+      sheet.scrollIntoView({
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+        block: 'start',
       });
-      window.dispatchEvent(new Event('resize'));
-      if (sheet.closest('.spiral-desk') || matchMedia('(max-width:700px)').matches) {
-        sheet.scrollIntoView({
-          behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
-          block: 'start',
-        });
-      }
-    }),
+    }
+  }
+  function selectFromLocation() {
+    const person = new URLSearchParams(window.location.search).get('interview');
+    if (person === locationPerson) return;
+    locationPerson = person;
+    const button =
+      buttons.find((candidate) => candidate.dataset.person === person) ||
+      buttons.find((candidate) => candidate.dataset.person === 'mother');
+    if (button && sheet.dataset.person !== button.dataset.person) selectInterview(button);
+  }
+  buttons.forEach((button) =>
+    button.addEventListener('click', () => selectInterview(button, true)),
   );
+  window.addEventListener('popstate', selectFromLocation);
+  selectFromLocation();
 })();

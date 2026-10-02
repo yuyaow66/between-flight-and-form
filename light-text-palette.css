@@ -41,7 +41,7 @@ html:not([data-theme='dark'])
     textPath,
     tspan
   ) {
-  color: #443959 !important;
+  color: var(--editorial-text) !important;
 }
 
 html:not([data-theme='dark'])
@@ -86,7 +86,7 @@ html:not([data-theme='dark'])
   :is(span, em, i, strong, small),
 html:not([data-theme='dark']) #J3964441023 > .scroll-invitation,
 html:not([data-theme='dark']) #J3964441023 > .scroll-invitation span {
-  color: #1d7b80 !important;
+  color: var(--theme-secondary) !important;
 }
 html:not([data-theme='dark']) #J3964441023 #interviews .spiral-words :is(text, textPath, tspan) {
   fill: currentColor;
@@ -113,10 +113,10 @@ html:not([data-theme='dark'])
     blockquote,
     figcaption
   ) {
-  color: #dcd6e2 !important;
+  color: var(--theme-ink) !important;
 }
 html:not([data-theme='dark']) #J3964441023 #films :is(#films-title em, .film-reading h3) {
-  color: #1d7b80 !important;
+  color: var(--theme-secondary) !important;
 }
 
 html:not([data-theme='dark']) body :is(#questions-drawer, #question-reader),
@@ -124,21 +124,21 @@ html:not([data-theme='dark'])
   body
   :is(#questions-drawer, #question-reader)
   :is(h1, h2, h3, h4, p, a, button, span, em, i, strong, small, blockquote, figcaption) {
-  color: #443959 !important;
+  color: var(--editorial-text) !important;
 }
 html:not([data-theme='dark'])
   body
   :is(#questions-drawer, #question-reader)
   :is(h2, h3, a, .questions-nav button, .paper-note small, .reader-controls button) {
-  color: #1d7b80 !important;
+  color: var(--theme-secondary) !important;
 }
 
 html:not([data-theme='dark']) #J3964441023 #interviews #care-title {
-  color: #443959 !important;
+  color: var(--editorial-text) !important;
 }
 html:not([data-theme='dark']) #J3964441023 #films::before {
-  color: #dcd6e2;
+  color: var(--theme-ink);
 }
 html:not([data-theme='dark']) #J3964441023 #looking-back::before {
-  color: #443959;
+  color: var(--editorial-text);
 }

@@ -61,6 +61,12 @@
       const fishImage = new Image();
       fishImage.src = 'assets/fish.webp';
       await Promise.all([fishImage.decode(), document.fonts.ready]);
+      const colors = getComputedStyle(document.body);
+      const palette = {
+        mesh: colors.getPropertyValue('--palette-lavender').trim(),
+        emphasis: colors.getPropertyValue('--palette-lime').trim(),
+        text: colors.getPropertyValue('--palette-night-ink').trim(),
+      };
       new window.p5((p) => {
         let canvas,
           nodes = [],
@@ -336,7 +342,8 @@
           ctx.drawImage(fishImage, -fishWidth / 2, -fh / 2, fishWidth, fh);
           ctx.restore();
           ctx.lineWidth = 0.55;
-          ctx.strokeStyle = 'rgba(175,133,159,.38)';
+          ctx.strokeStyle = palette.mesh;
+          ctx.globalAlpha = .38;
           ctx.beginPath();
           for (const [ai, bi] of links) {
             const a = nodes[ai],
@@ -345,7 +352,8 @@
             ctx.lineTo(b.x, b.y);
           }
           ctx.stroke();
-          ctx.strokeStyle = 'rgba(219,176,195,.52)';
+          ctx.strokeStyle = palette.emphasis;
+          ctx.globalAlpha = .52;
           const nearestColumn = clamp(Math.round((fish.x - inset) / stepX), 3, columns - 4);
           const nearestRow = clamp(Math.round((fish.y - 24) / stepY), 4, rows - 5);
           for (let offset = -2; offset <= 2; offset += 2) {
@@ -364,6 +372,7 @@
             );
             ctx.stroke();
           }
+          ctx.globalAlpha = 1;
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           for (let i = 0; i < nodes.length; i++) {
@@ -377,9 +386,8 @@
             ctx.translate(n.x, n.y);
             ctx.rotate(angle);
             ctx.font = `italic 100 ${n.prominent ? (p.width < 600 ? 14 : 17) : p.width < 600 ? 12 : 14}px "PP Lettra Mono", monospace`;
-            ctx.fillStyle = n.prominent
-              ? 'rgba(226,176,194,.94)'
-              : `rgba(197,181,202,${0.76 + strain * 0.22})`;
+            ctx.fillStyle = n.prominent ? palette.emphasis : palette.text;
+            ctx.globalAlpha = n.prominent ? .94 : .76 + strain * .22;
             ctx.fillText(n.letter, 0, 0);
             ctx.restore();
           }

@@ -1,0 +1,33 @@
+body.editorial-showcase.poster-paper-active {
+  isolation: isolate;
+  background: var(--ambient-background, var(--editorial-canvas));
+}
+.poster-paper-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: strict;
+  background: var(--ambient-background, var(--editorial-canvas));
+}
+.poster-paper-strip {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  background-image: var(--poster-paper-atlas);
+  background-repeat: no-repeat;
+  transform-origin: center;
+}
+body.poster-paper-active :is(main, .editorialHero, .projectSequence, .projectBlock, .textBlock) {
+  background: transparent;
+}
+body.poster-paper-active .editorialFooter {
+  background: var(--editorial-night);
+}
+@media print {
+  .poster-paper-backdrop {
+    display: none;
+  }
+}

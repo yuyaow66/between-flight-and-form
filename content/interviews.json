@@ -1,0 +1,46 @@
+{
+  "grandmother": {
+    "name": "My grandmother",
+    "note": "Edited and translated from a conversation. Unclear passages have been reconstructed from context; this is not a verbatim transcript.",
+    "answers": [
+      "I’m very happy. What do you want me to say about expectations? Grandma doesn’t know. Let Grandpa answer. You want Grandma to say it? Then let Grandpa help me a little. How would I know? Pressure and expectations? Grandma feels very happy now. I don’t really have any pressure.",
+      "The most important part of the day? What does that mean? Well, apart from sleeping, the two of us make ourselves something to eat, don’t we? Just us two old people, making a little food. As long as we’re healthy, isn’t that enough? Keeping well, so you don’t have to worry about us. Isn’t that enough?",
+      "The most important people and things? How is Grandma supposed to answer that? I just want to be healthy. Isn’t that enough? The most important people? All of you. You’re the most important, the very most important. Grandma’s getting so old now, isn’t she? Sometimes I can’t sleep, and I think about you all.",
+      "Start over? Even if I wanted to, I couldn’t do those things now. What could I do? Well, let me think, let me think. Ha ha ha. What would I want to do over now? Grandpa can’t think of anything either.\n\nI regret marrying your grandpa.\n\nOur village back home was such a lovely place. You’ve been there, you know. Grandma lost out, lost out. Leaving such a lovely place and coming to this awful place. I regret coming down here to the flatlands. Working myself to exhaustion, just exhausted."
+    ],
+    "chinese": [
+      "很幸福的。你要我说有什么要求啊，外婆又不知道，那就外公来说。要外婆说？那让外公教我一下，我怎么知道呢。什么压力和要求？外婆现在觉得很幸福了，没什么压力的。",
+      "每天最重要的时刻？这是什么啊？就是除了睡觉，我们两个人自己弄点吃的，吃吃，是不是？两个老人，自己弄点吃的，身体健康不就好了吗？好好的，不让你们担心，不就好了。",
+      "最重要的人和事物？那外婆怎么答得出来呢。外婆就想身体健康，不就好了。最重要的人？你们呀，最重要最重要就是你。外婆都这么老了，是不是？有时候睡不着，就想到你们。",
+      "重新来过？现在有心也做不来了，还能做什么呢。那就想想吧，想想，哈哈哈哈。现在我还想重新干嘛呢，外公也说不出来。\n\n我后悔嫁给了你外公。\n\n我们老家那个村庄那么好，你去玩过就知道了。外婆亏了，亏了，那么好的地方，跑到这个鬼地方来。我就后悔到这个平地来，干活干得累死，累死。"
+    ],
+    "summaries": [
+      "She describes her current family life as happy and says she feels little pressure at this stage of her life.",
+      "For her, daily life centres on sharing meals with her husband and staying healthy. Being well enough to care for themselves means their family has less reason to worry.",
+      "Her family, especially her granddaughter, matters most to her. She also values good health and often thinks about her loved ones when she cannot sleep.",
+      "She regrets marrying her husband and leaving her home village. She remembers her hometown fondly and describes life after moving to the flatlands as exhausting because of the work she had to do."
+    ]
+  },
+  "mother": {
+    "name": "My mother",
+    "note": "Translated from her written answers, preserving her conversational tone.",
+    "answers": [
+      "Right now, I suppose what the family needs from Mum is to take good care of you and Niuniu. Niuniu has his college entrance exams coming up, so I need to look after both his feelings and his health. And with you, Mum needs to pay special attention to how you’re doing. I don’t want you to get ill again.\n\nAt work, I need to help Dad run the factory well. Mum is responsible for the administration and HR, and Dad asks me to learn more about those things.\n\nAs for pressure, at home there are the older ones and the younger ones to look after. Sometimes the everyday responsibilities and the money side of things feel like a lot. At work, Mum spent so many years at home without working, and now I’m helping Dad manage the company. Sometimes I worry about making mistakes, and that puts a bit of pressure on me.\n\nOverall, though, Mum is very happy with where I am and with life right now. You and Niuniu are both doing well, and Niuniu is working hard too. Especially you—you’re doing so well. You’re getting better and better now, and Mum feels so reassured.",
+      "The most important moment of the day? I don’t think there’s really one particular moment. If I had to say, back when I wasn’t working, it was taking the time to make a nice dinner and waiting for Dad, or for all of you when you were home, so we could sit down together and enjoy a happy meal. For Mum, that was the happiest and most important time.\n\nNow that you’re in America, every time we have a video call is the most important moment for me. Seeing that you’re doing well is what makes Mum happiest.",
+      "The most important people in Mum’s life are you and Niuniu. Right now, you two matter most to me. The most important thing is to help Dad run the factory well and try to earn a bit more money for now.",
+      "What Mum most wants to do over is to go back to when you were little. I would raise you with care and let you grow up happy. I wouldn’t lose my temper with you like that. I wouldn’t let you go abroad to study, or let you go through so much hurt. Then you wouldn’t have got ill, wouldn’t have needed medication, and wouldn’t have had to work so hard to lose weight. That’s what Mum most wishes she could do over."
+    ],
+    "chinese": [
+      "就当下家庭对妈妈的要求应该是照顾好你和牛牛，牛牛要高考了，要照顾好他的情绪和身体。你，妈妈要特别关注你状态，不能再复发生病。工作的要求就是要帮爸爸做好工厂，工厂里的行政人事妈妈要负责好，爸爸会要求妈妈多学习学习这些方面的知识。压力：家庭的压力上有老下有小都要照顾好，生活上还有经济上有时候会感觉压力有点大。工作上的压力是妈妈在家这么多年不上班，现在在帮爸爸管理公司，怕出错有时会有点压力。总的来说妈妈当下的状态和生活还是很满意的，因为你和牛牛都很不错，牛牛也很努力，特别是你很棒，现在是状态越来越好了，妈妈很放心。",
+      "一天中最重要的时刻，好像也没啥重要时刻，一定要说的话，以前不上班的时候，认认真真的做好一顿晚饭，等爸爸或你们在家大家一起坐一起开开心心吃晚饭，对妈妈来说是最开心最重要的时刻。你在美国，每次和你视频的时候是我最重要的时刻。看到你好好的，是妈妈最开心的时候。",
+      "妈妈人生中最重要的人是你和牛牛，当下是妈妈最重要的；最重要的事，是帮爸爸把工厂做好，眼下争取多赚点钱。",
+      "妈妈最想重新来过的时候是想回到你小时候，好好养育你，让你开开心心的长大，不对你乱发脾气不让你出国留学，不让你受那么多委屈，那样你就不会生病，不用吃药，也就不会那么辛苦的减肥。这是妈妈最想重新来过的事情。"
+    ],
+    "summaries": [
+      "She balances caring for her children and older family members with managing administration and HR at the family factory. Financial responsibilities and fear of making mistakes can feel demanding, but she is satisfied with her life and reassured by her children’s progress.",
+      "Shared family dinners were once the most meaningful part of her day. With her daughter now in America, their video calls have become especially important; seeing her daughter well brings her the most happiness.",
+      "Her two children are the most important people in her life. Her immediate priority is to help her husband run the factory successfully and improve the family’s income.",
+      "She wishes she could return to her daughter’s childhood, raise her with greater patience, and protect her from hurt. She regrets letting her study abroad and believes that different choices might have spared her daughter illness, medication, and the struggle to lose weight."
+    ]
+  }
+}

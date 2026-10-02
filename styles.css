@@ -1238,10 +1238,10 @@ body:has(.fish-silhouette-rail) {
 }
 html[data-theme='dark'] {
   color-scheme: dark;
-  background: #151218;
+  background: var(--editorial-night);
 }
 html[data-theme='dark'] body {
-  background: #151218;
+  background: var(--editorial-night);
   color: #ece2df;
   --swatch-1: #ece2df;
   --swatch-2: #d6c9cb;
@@ -1258,7 +1258,7 @@ html[data-theme='dark'] .theme-toggle {
 html[data-theme='dark'] .flight-home.page,
 html[data-theme='dark'] .flight-information.page,
 html[data-theme='dark'] .flight-information .page-content {
-  background-color: #151218;
+  background-color: var(--editorial-night);
   color: #ece2df;
 }
 html[data-theme='dark'] .flight-home .page-content .cover,
@@ -1500,24 +1500,12 @@ html[data-theme='dark'] .light-only {
   color: #a6cbd0;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  html,
-  body,
-  body * {
-    cursor:
-      url('assets/chopsticks-floral-cursor.png?v=1') 4 29,
-      auto !important;
-  }
-  input,
-  textarea,
-  [contenteditable='true'] {
-    cursor: text !important;
-  }
-}
-
 :root {
   --editorial-blue: #287eb6;
   --editorial-paper: #fafaf6;
+  --editorial-canvas: #faf9f3;
+  --editorial-night: #151218;
+  --editorial-text: #443959;
 }
 html:not([data-theme='dark']) body,
 html:not([data-theme='dark']) .flight-home.page {
@@ -1878,14 +1866,15 @@ html[data-theme='dark'] .flight-home .page-content .webtitle span {
   overflow: clip;
 }
 html:not([data-theme='dark']) .collage-layout.page {
-  background: #faf9f3;
+  background: var(--editorial-canvas);
 }
 .poster-art {
   position: absolute;
   inset: 0 0 auto;
   height: 850px;
   z-index: -1;
-  background: #86c1dd;
+  --poster-background: #86c1dd;
+  background: var(--poster-background);
   overflow: hidden;
 }
 .poster-word {
@@ -2161,14 +2150,15 @@ html:not([data-theme='dark']) .collage-layout.page {
   color: #164e64;
 }
 html[data-theme='dark'] .poster-art {
-  background: #352531;
+  --poster-background: #352531;
+  background: var(--poster-background);
 }
 html[data-theme='dark']
   :is(.poster-word, .collage-layout .films:before, .collage-layout .beyond:before) {
   color: #bd8b9c26;
 }
 html[data-theme='dark'] .poster-strip {
-  background: #151218;
+  background: var(--editorial-night);
 }
 html[data-theme='dark'] .poster-circle {
   opacity: 0.2;

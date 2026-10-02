@@ -41,7 +41,7 @@ html[data-theme='dark']
     textPath,
     tspan
   ) {
-  color: #d3ccb9 !important;
+  color: var(--theme-ink) !important;
 }
 
 html[data-theme='dark']
@@ -74,7 +74,7 @@ html[data-theme='dark']
   :is(h1, h2)
   :is(span, em, i, strong),
 html[data-theme='dark'] #J3964441023 #interviews #care-title {
-  color: #e5026b !important;
+  color: var(--palette-lime) !important;
 }
 
 html[data-theme='dark']
@@ -106,18 +106,18 @@ html[data-theme='dark']
   )
   :is(h3, summary, .chapter-lead, .stage-question, .word-question)
   :is(span, em, i, strong) {
-  color: #017a80 !important;
+  color: var(--theme-secondary) !important;
 }
 
 html[data-theme='dark'] #J3964441023 > .scroll-invitation,
 html[data-theme='dark'] #J3964441023 > .scroll-invitation span {
-  color: #d3ccb9 !important;
+  color: var(--theme-ink) !important;
 }
 html[data-theme='dark'] #J3964441023 #interviews .spiral-words :is(text, textPath, tspan) {
   fill: currentColor;
 }
 html[data-theme='dark'] #J3964441023 :is(#films, #looking-back)::before {
-  color: #d3ccb9;
+  color: var(--theme-ink);
 }
 
 html[data-theme='dark'] body :is(#questions-drawer, #question-reader),
@@ -125,10 +125,10 @@ html[data-theme='dark']
   body
   :is(#questions-drawer, #question-reader)
   :is(h1, h2, h3, h4, p, a, button, span, em, i, strong, small, blockquote, figcaption) {
-  color: #d3ccb9 !important;
+  color: var(--theme-ink) !important;
 }
 html[data-theme='dark'] body :is(#questions-drawer, #question-reader) :is(h2, h3) {
-  color: #e5026b !important;
+  color: var(--palette-lime) !important;
 }
 html[data-theme='dark'] body :is(#questions-drawer, #question-reader) .paper-note,
 html[data-theme='dark']
@@ -136,7 +136,7 @@ html[data-theme='dark']
   :is(#questions-drawer, #question-reader)
   .paper-note
   :is(span, small, p) {
-  color: #017a80 !important;
+  color: var(--theme-secondary) !important;
 }
 
 html:not([data-theme='dark']) #J3964441023 :is(.film-question, .stage-question, .word-question) {
@@ -148,7 +148,7 @@ html[data-theme='dark']
   :is(#films, #a-life-unfolding, #words-we-inherit)
   p:is(.film-question, .stage-question, .word-question) {
   display: block;
-  color: #e5026b !important;
+  color: var(--palette-lime) !important;
   font-size: clamp(20px, 1.9vw, 27px) !important;
   line-height: 1.5 !important;
   margin-top: 28px;

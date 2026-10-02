@@ -1,0 +1,331 @@
+html body.diary-home #J3964441023 section#films {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: var(--diary-paper) !important;
+  color: var(--diary-ink) !important;
+  counter-reset: diary-film;
+}
+
+html body.diary-home #J3964441023 #films::before,
+html body.diary-home #J3964441023 #films #films-title::after,
+html body.diary-home #J3964441023 #films .film-still::after,
+html body.diary-home #J3964441023 #films .film-question::before {
+  content: none;
+}
+
+html body.diary-home #J3964441023 #films > .diary-folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 12px 16px;
+  border-top: 1px solid var(--diary-ink);
+  border-bottom: 1px solid var(--diary-ink);
+}
+
+html body.diary-home #J3964441023 #films > .diary-folio span {
+  color: var(--diary-ink) !important;
+  font: italic 100 11px/1.4 var(--diary-sans) !important;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+html body.diary-home #J3964441023 #films .films-inner,
+html body.diary-home #J3964441023 #films .film-list {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+html body.diary-home #J3964441023 #films #films-title {
+  position: static;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 24px 16px;
+  color: var(--diary-ink) !important;
+  font: italic 300 36px/1.12 var(--diary-serif);
+  letter-spacing: -0.025em;
+  text-align: left;
+  text-transform: none !important;
+  text-shadow: none;
+  text-wrap: wrap;
+  transform: none;
+}
+
+html body.diary-home #J3964441023 #films #films-title em {
+  color: var(--diary-ink) !important;
+  font: inherit;
+  text-transform: none !important;
+  letter-spacing: inherit;
+}
+
+html body.diary-home #J3964441023 #films article.film-entry:nth-child(n) {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto auto 1fr auto auto;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--diary-ink) !important;
+  border: 0 !important;
+  border-top: 1px solid var(--diary-ink) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none;
+  counter-increment: diary-film;
+}
+
+html body.diary-home #J3964441023 #films .film-entry::before {
+  content: 'FILM 0' counter(diary-film);
+  grid-column: 1 / 5;
+  grid-row: 1;
+  align-self: start;
+  justify-self: start;
+  width: fit-content;
+  margin: 16px 16px 24px;
+  padding: 4px 7px;
+  border: 1px solid var(--diary-ink);
+  color: var(--diary-ink);
+  font: italic 100 11px/1 var(--diary-sans);
+  letter-spacing: 0.02em;
+}
+
+html body.diary-home #J3964441023 #films .film-entry:nth-child(n) > h2 {
+  grid-column: 1 / 5;
+  grid-row: 2;
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0 24px 16px 16px;
+  color: var(--diary-ink) !important;
+  font: italic 300 30px/1.15 var(--diary-serif);
+  letter-spacing: -0.02em;
+  text-transform: none;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+  transform: none;
+  scroll-margin-top: 80px;
+}
+
+html body.diary-home #J3964441023 #films .film-entry:nth-child(n) .film-study,
+html body.diary-home #J3964441023 #films .film-entry:nth-child(n) .film-reading {
+  display: contents;
+}
+
+html body.diary-home #J3964441023 #films .film-entry:nth-child(n) .film-still {
+  position: relative;
+  grid-column: 5 / 13;
+  grid-row: 1 / 4;
+  align-self: stretch;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  border-left: 1px solid var(--diary-ink);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  transform: none;
+}
+
+html body.diary-home #J3964441023 #films .film-still img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+html body.diary-home #J3964441023 #films .film-reading p {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 16px;
+  color: var(--diary-ink) !important;
+  border-top: 1px solid var(--diary-ink);
+  border-left: 1px solid var(--diary-ink);
+  font-family: var(--diary-sans) !important;
+  font-weight: 100 !important;
+  font-style: italic !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0;
+}
+
+html body.diary-home #J3964441023 #films .film-reading .film-meta {
+  grid-column: 1 / 5;
+  grid-row: 3;
+  align-self: start;
+  margin: 0;
+  padding: 0 24px 24px 16px;
+  border: 0;
+  color: var(--diary-ink) !important;
+  font-family: var(--diary-sans) !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0;
+}
+
+html body.diary-home #J3964441023 #films .film-reading p:nth-of-type(2) {
+  grid-column: 5 / 9;
+  grid-row: 4;
+}
+
+html body.diary-home #J3964441023 #films .film-reading p:nth-of-type(3) {
+  grid-column: 9 / 13;
+  grid-row: 4;
+}
+
+html body.diary-home #J3964441023 #films .film-entry:nth-child(n) .film-question {
+  grid-column: 5 / 13;
+  grid-row: 5;
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+  border-top: 1px solid var(--diary-ink);
+  border-left: 1px solid var(--diary-ink);
+  color: var(--diary-ink) !important;
+  font-family: var(--diary-serif) !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+  font-size: 23px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em;
+  transform: none;
+}
+
+html body.diary-home #J3964441023 #films .films-back {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 16px;
+  border-top: 1px solid var(--diary-ink);
+  border-bottom: 1px solid var(--diary-ink);
+  color: var(--diary-ink) !important;
+  background: transparent;
+  font-family: var(--diary-sans) !important;
+  font-weight: 100 !important;
+  font-style: italic !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: none;
+}
+
+html body.diary-home #J3964441023 #films .films-back:is(:hover, :focus-visible) {
+  color: var(--diary-paper) !important;
+  background: var(--diary-ink);
+  text-decoration: none;
+}
+
+html body.diary-home #J3964441023 #films .films-back:focus-visible {
+  outline: 2px solid var(--diary-ink);
+  outline-offset: -5px;
+}
+
+@media (max-width: 1024px) {
+  html body.diary-home #J3964441023 #films .film-entry:nth-child(n) > h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body.diary-home #J3964441023 section#films {
+    padding: 0;
+  }
+
+  html body.diary-home #J3964441023 #films > .diary-folio {
+    margin: 0;
+    padding: 12px;
+  }
+
+  html body.diary-home #J3964441023 #films #films-title {
+    margin: 0;
+    padding: 24px 12px;
+    font-size: 32px;
+  }
+
+  html body.diary-home #J3964441023 #films article.film-entry:nth-child(n) {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body.diary-home #J3964441023 #films .film-entry::before {
+    display: inline-block;
+    margin: 16px 12px 20px;
+  }
+
+  html body.diary-home #J3964441023 #films .film-entry:nth-child(n) > h2 {
+    margin: 0;
+    padding: 0 12px 24px;
+    font-size: 28px;
+  }
+
+  html body.diary-home #J3964441023 #films .film-entry:nth-child(n) .film-still {
+    width: 100%;
+    margin: 0;
+    padding: 0 12px 16px;
+    border: 0;
+  }
+
+  html body.diary-home #J3964441023 #films .film-reading p {
+    margin: 0;
+    padding: 16px 12px;
+    border-left: 0;
+    font-size: 16px !important;
+  }
+
+  html body.diary-home #J3964441023 #films .film-reading .film-meta {
+    margin: 0;
+    padding: 0 12px 16px;
+    font-size: 12px !important;
+  }
+
+  html body.diary-home #J3964441023 #films .film-entry:nth-child(n) .film-question {
+    margin: 0;
+    padding: 16px 12px;
+    border-left: 0;
+    font-size: 22px !important;
+  }
+
+  html body.diary-home #J3964441023 #films .films-back {
+    padding: 16px 12px;
+    text-align: left;
+  }
+}

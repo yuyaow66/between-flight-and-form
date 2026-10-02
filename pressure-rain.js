@@ -19,7 +19,11 @@
       const P5 = await window.loadThesisP5();
       new P5((p) => {
         const vocabulary = ['爱', '不甘', '委屈', '渴望'];
-        const palette = ['#fefefe', '#f40009'];
+        const colors = getComputedStyle(document.body);
+        const palette = [
+          ['--palette-lavender', '#ad88b5'],
+          ['--palette-lime', '#c3db55'],
+        ].map(([name, fallback]) => colors.getPropertyValue(name).trim() || fallback);
         const particles = [];
         const sprites = [];
         let time = 0,

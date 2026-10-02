@@ -1,0 +1,130 @@
+:root {
+  --palette-paper: #ead7e3;
+  --palette-ink: #593653;
+  --palette-lime: #c3db55;
+  --palette-lavender: #ad88b5;
+  --palette-blush: #d8abc8;
+  --palette-night: #2b1c30;
+  --palette-night-ink: #edd4e3;
+  --theme-paper: var(--palette-paper);
+  --theme-ink: var(--palette-ink);
+  --theme-wash: var(--palette-blush);
+  --theme-secondary: #78496d;
+  --editorial-paper: var(--theme-paper);
+  --editorial-canvas: var(--theme-paper);
+  --editorial-night: var(--palette-night);
+  --editorial-text: var(--theme-ink);
+  --editorial-blue: var(--theme-secondary);
+  color-scheme: light;
+  background: var(--theme-paper);
+}
+html[data-theme='dark'] {
+  --theme-paper: var(--palette-night);
+  --theme-ink: var(--palette-night-ink);
+  --theme-wash: #402945;
+  --theme-secondary: var(--palette-lime);
+  color-scheme: dark;
+}
+body.diary-home,
+html[data-theme='dark'] body.diary-home {
+  --diary-paper: var(--theme-paper);
+  --diary-ink: var(--theme-ink);
+  --diary-rule: var(--theme-ink);
+  --swatch-1: var(--theme-ink);
+  --swatch-2: var(--theme-secondary);
+  --swatch-3: var(--theme-secondary);
+  --swatch-6: var(--palette-lime);
+  accent-color: var(--theme-ink);
+}
+body.editorial-showcase {
+  --editorial-paper: var(--palette-paper);
+  --editorial-canvas: var(--palette-paper);
+  --editorial-night: var(--palette-night);
+  --editorial-text: var(--palette-ink);
+  --editorial-blue: var(--palette-ink);
+}
+body::selection,
+body *::selection {
+  background: var(--palette-lime);
+  color: var(--palette-ink);
+}
+html body.diary-home #J3964441023 .diary-masthead,
+html body.diary-information .information-masthead,
+body.diary-home .archive-intro {
+  background: var(--theme-wash);
+}
+html body.diary-home #J3964441023 .archive-row-label h2,
+html body.diary-home #J3964441023 .diary-folio,
+html body.diary-home #J3964441023 .diary-folio span,
+html body.diary-information #E1325429045 .information-label {
+  background: var(--palette-lime);
+  color: var(--palette-ink) !important;
+}
+html body.diary-home #J3964441023 .archive-row-label h2 a {
+  color: var(--palette-ink);
+}
+body.diary-home .archive-row-label > span {
+  background: var(--theme-wash);
+}
+html body.diary-home #J3964441023 :is(.archive-row-open, .archive-specimen):is(:hover, :focus-visible) {
+  background: var(--palette-lime);
+  color: var(--palette-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window[aria-pressed='true'] .window-bottom,
+html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window[aria-pressed='true'] .window-bottom span,
+html body.diary-home #J3964441023 #films .films-back:is(:hover, :focus-visible) {
+  background: var(--palette-lime) !important;
+  color: var(--palette-ink) !important;
+}
+html body.diary-home #J3964441023 :is(.word-question, .stage-question, .film-question) {
+  color: var(--theme-secondary) !important;
+}
+html[data-theme='dark'] body.diary-home #J3964441023 :is(.chapter-title, #interviews-title, #films-title),
+html[data-theme='dark'] body.diary-home #J3964441023 :is(.chapter-title, #interviews-title, #films-title) :is(span, em) {
+  color: var(--palette-lime) !important;
+}
+html body.diary-home :is(#questions-drawer, #question-reader),
+html body.diary-home :is(#questions-drawer, #question-reader) :is(h1, h2, h3, h4, p, a, button, span, em, i, strong, small, blockquote, figcaption) {
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #questions-drawer .questions-nav button[aria-pressed='true'] {
+  background: var(--palette-lime);
+  color: var(--palette-ink) !important;
+}
+html body.diary-home :is(#about-dialog, #questions-drawer, #question-reader)::backdrop {
+  background: color-mix(in srgb, var(--palette-night) 38%, transparent);
+}
+html body.diary-home .paper-coverflow .arc-fallback {
+  background: var(--theme-wash);
+  color: var(--diary-ink);
+}
+html body.diary-home .paper-note {
+  background-color: var(--theme-wash);
+  color: var(--diary-ink);
+}
+html body.diary-home .life-net canvas:focus-visible {
+  box-shadow: 0 2px 0 var(--palette-lime);
+}
+body.diary-home #fish-tear-wash stop:nth-child(1) { stop-color: var(--palette-paper); }
+body.diary-home #fish-tear-wash stop:nth-child(2) { stop-color: var(--palette-lavender); }
+body.diary-home #fish-tear-wash stop:nth-child(3) { stop-color: var(--palette-ink); }
+body.diary-home .fish-tear-trace { stroke: var(--palette-lavender); }
+body.diary-home .fish-teardrop path[stroke] { stroke: var(--palette-paper); }
+body.diary-home #blade stop:nth-child(1) { stop-color: var(--palette-paper); }
+body.diary-home #blade stop:nth-child(2) { stop-color: var(--palette-lavender); }
+body.diary-home #blade stop:nth-child(3) { stop-color: var(--palette-blush); }
+body.diary-home .fish-knife svg > path:first-of-type { stroke: var(--palette-ink); }
+body.diary-home .fish-knife svg > path:nth-of-type(2) { stroke: var(--palette-paper); }
+body.diary-home .fish-knife svg > path:nth-of-type(3) { fill: var(--palette-ink); stroke: var(--palette-night); }
+body.diary-home .fish-knife svg > path:nth-of-type(4) { stroke: var(--palette-lavender); }
+body.diary-home .fish-knife circle { fill: var(--palette-lime); }
+.editorial-showcase .editorialFooter {
+  color: var(--palette-night-ink);
+}
+.editorial-showcase .editorialFooter .footerTitle {
+  color: var(--palette-lime);
+}
+.editorial-showcase .directoryLink:hover,
+.editorial-showcase .directorySubsections a:hover {
+  color: var(--palette-lime);
+}

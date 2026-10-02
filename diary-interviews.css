@@ -1,0 +1,532 @@
+html body.diary-home #J3964441023 #interviews {
+  --new-ink: var(--diary-ink);
+  --new-red: var(--diary-ink);
+  --new-secondary: var(--diary-ink);
+  --new-rule: var(--diary-ink);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  color: var(--diary-ink);
+  border: 0 !important;
+  border-top: 1px solid var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews :is(.new-family-underlay, .portrait-spiral, .spiral-words, .mosaic-overlay, .question-dot) {
+  display: none;
+}
+html body.diary-home #J3964441023 #interviews > .diary-folio {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 20px;
+  border: 0;
+  border-bottom: 1px solid var(--diary-ink);
+}
+html body.diary-home #J3964441023 #interviews .interviews-heading {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+  display: block;
+  align-self: stretch;
+  margin: 0;
+  padding: 28px 20px;
+  border-right: 1px solid var(--diary-ink);
+}
+html body.diary-home #J3964441023 #interviews #interviews-title {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font: italic 300 36px/1.14 var(--diary-serif);
+  letter-spacing: -0.02em;
+  color: var(--diary-ink) !important;
+  text-transform: none !important;
+  text-wrap: initial;
+}
+html body.diary-home #J3964441023 #interviews #interviews-title em {
+  font: inherit;
+  color: inherit !important;
+  text-transform: none !important;
+}
+html body.diary-home #J3964441023 #interviews .conversation-desk {
+  display: contents;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage {
+  grid-column: 5 / span 8;
+  grid-row: 2;
+  position: relative;
+  inset: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  container-type: normal;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+}
+html body.diary-home #J3964441023 #interviews .spiral-label-layer {
+  display: contents;
+  position: static;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window {
+  position: relative;
+  inset: auto;
+  display: block;
+  grid-column: auto;
+  grid-row: 1;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 14px 12px;
+  border: 0 !important;
+  border-right: 1px solid var(--diary-ink) !important;
+  border-radius: 0;
+  background: none !important;
+  box-shadow: none;
+  overflow: visible;
+  translate: none;
+  transform: none;
+  filter: none;
+  transition: none !important;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window[data-person='aunt-2'] {
+  border-right: 0 !important;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window img {
+  display: block;
+  width: 100%;
+  height: 152px;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  clip-path: none;
+  mask: none;
+  border: 0;
+  border-radius: 0;
+  filter: none;
+  opacity: 1;
+  transform: none;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .window-bottom {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 38px;
+  margin-top: 12px;
+  padding: 7px 6px;
+  border: 1px solid var(--diary-ink) !important;
+  background: var(--diary-paper) !important;
+  color: var(--diary-ink) !important;
+  font: italic 100 10px/1.4 var(--diary-mono) !important;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: normal;
+  text-decoration: none;
+  letter-spacing: 0;
+  opacity: 1;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .window-bottom span {
+  font: italic 100 12px/1.2 var(--diary-sans) !important;
+  color: inherit !important;
+}
+html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window[aria-pressed='true'] .window-bottom {
+  color: var(--diary-paper) !important;
+  background: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews .portrait-window:focus-visible {
+  outline: 2px solid var(--diary-ink);
+  outline-offset: -5px;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet,
+html body.diary-home #J3964441023 #interviews :is(.generations, #everyday-care) {
+  grid-column: 1 / -1;
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: var(--diary-ink);
+  background: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--diary-ink) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet {
+  grid-row: 3;
+  scroll-margin-top: 16px;
+}
+html body.diary-home #J3964441023 #interviews .generations { grid-row: 4; }
+html body.diary-home #J3964441023 #interviews #everyday-care { grid-row: 5; }
+html body.diary-home #J3964441023 #interviews #conversation-sheet .conversation-timeline {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet :is(.conversation-timeline, .memory-opening, .sheet-question)::before {
+  content: none;
+  display: none;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-heading {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px;
+  border-right: 1px solid var(--diary-ink);
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet :is(.sheet-caption, .new-interview-meta) {
+  display: block;
+  margin: 0;
+  font: italic 100 10px/1.5 var(--diary-mono) !important;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .new-interview-meta {
+  margin-top: 8px;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet #conversation-name {
+  margin: 28px 0 16px;
+  padding: 0;
+  font: italic 300 36px/1.15 var(--diary-serif) !important;
+  letter-spacing: -0.025em;
+  color: var(--diary-ink) !important;
+  text-transform: none !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet :is(.mother-memory, .grandmother-memory, .new-aunt-memory) {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  align-self: start;
+  justify-self: stretch;
+  transform: none;
+  overflow: visible;
+  border: 0;
+  box-shadow: none;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening :is(.mother-memory, .new-aunt-memory) {
+  grid-column: 5 / span 4;
+  grid-row: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening .--new-aunt-photo[data-photo='2'] {
+  grid-column: 9 / span 4;
+  grid-row: 1;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening .--new-aunt-photo[data-photo='3'] {
+  grid-column: 5 / span 4;
+  grid-row: 2;
+  margin: 0;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening .--new-aunt-photo[data-photo='4'] {
+  grid-column: 9 / span 4;
+  grid-row: 2;
+  margin: 0;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .new-memory-placeholder {
+  display: none;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet :is(.mother-memory, .grandmother-memory, .new-aunt-memory) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: left top;
+  clip-path: none;
+  mask: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+  opacity: 1;
+  transform: none;
+  transition: none !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening img {
+  max-height: 250px;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-questions {
+  display: block;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet[data-person='aunt-2'] .sheet-questions {
+  display: none;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  border-top: 1px solid var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question .memory-copy {
+  display: contents;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question h3 {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  align-self: stretch;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px;
+  border-right: 1px solid var(--diary-ink);
+  font: italic 300 25px/1.35 var(--diary-serif) !important;
+  letter-spacing: -0.01em;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .personal-answer {
+  grid-column: 5 / span 5;
+  grid-row: 1;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px 32px;
+  columns: auto;
+  font: italic 100 16px/1.65 var(--diary-sans) !important;
+  letter-spacing: 0;
+  white-space: pre-line;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet[data-person^='aunt-'] .personal-answer {
+  grid-column: 5 / span 8;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question :is(.mother-memory, .grandmother-memory) {
+  grid-column: 10 / span 3;
+  grid-row: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px 24px 0;
+  justify-self: stretch;
+  transform: none;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-heading p {
+  max-width: 38ch;
+  margin: 0;
+  padding: 0;
+  font: italic 100 14px/1.6 var(--diary-sans) !important;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-compare {
+  display: block;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 14px 20px;
+  border-top: 1px solid var(--diary-ink);
+  font: italic 100 11px/1.6 var(--diary-mono) !important;
+  text-transform: uppercase;
+  color: var(--diary-ink) !important;
+  text-underline-offset: 4px;
+}
+html body.diary-home #J3964441023 #interviews :is(.generations, #everyday-care) .chapter-folio {
+  display: none;
+}
+html body.diary-home #J3964441023 #interviews :is(#generations-title, #care-title) {
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px;
+  font: italic 300 36px/1.15 var(--diary-serif);
+  letter-spacing: -0.025em;
+  text-transform: none !important;
+  color: var(--diary-ink) !important;
+  text-wrap: initial;
+}
+html body.diary-home #J3964441023 #interviews :is(#generations-title, #care-title) em {
+  font: inherit;
+  color: inherit !important;
+}
+html body.diary-home #J3964441023 #interviews .question-comparisons {
+  display: block;
+  margin: 0;
+}
+html body.diary-home #J3964441023 #interviews .comparison {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  border-top: 1px solid var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews .comparison h3 {
+  grid-column: 1 / span 4;
+  align-self: stretch;
+  min-height: 0;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px;
+  border-right: 1px solid var(--diary-ink);
+  font: italic 300 25px/1.35 var(--diary-serif) !important;
+  letter-spacing: -0.01em;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews .comparison-grid {
+  grid-column: 5 / span 8;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0;
+}
+html body.diary-home #J3964441023 #interviews .comparison-answer {
+  min-width: 0;
+  margin: 0;
+  padding: 24px 20px;
+}
+html body.diary-home #J3964441023 #interviews .comparison-answer h4 {
+  margin: 0 0 14px;
+  padding: 5px 8px;
+  width: fit-content;
+  border: 1px solid var(--diary-ink);
+  font: italic 100 10px/1.4 var(--diary-mono) !important;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews .comparison-answer p,
+html body.diary-home #J3964441023 #interviews #everyday-care .care-objects p {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font: italic 100 16px/1.65 var(--diary-sans) !important;
+  letter-spacing: 0;
+  color: var(--diary-ink) !important;
+}
+html body.diary-home #J3964441023 #interviews #everyday-care {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0;
+}
+html body.diary-home #J3964441023 #interviews #everyday-care .care-heading {
+  grid-column: 1 / span 4;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid var(--diary-ink);
+}
+html body.diary-home #J3964441023 #interviews #everyday-care .care-objects {
+  grid-column: 5 / span 8;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+html body.diary-home #J3964441023 #interviews #everyday-care .care-objects article {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 24px 20px;
+  border: 0;
+}
+html body.diary-home #J3964441023 #interviews #everyday-care .care-objects article + article {
+  border-top: 1px solid var(--diary-ink);
+}
+html body.diary-home #J3964441023 #interviews #everyday-care .care-objects h3 {
+  max-width: none;
+  margin: 0 0 18px;
+  font: italic 300 27px/1.3 var(--diary-serif) !important;
+  letter-spacing: -0.01em;
+  color: var(--diary-ink) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window:hover {
+    transform: none;
+    filter: none;
+  }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window:hover .window-bottom {
+    background: var(--diary-ink) !important;
+    color: var(--diary-paper) !important;
+  }
+}
+@media (min-width: 1600px) {
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window img { height: 190px; }
+}
+@media (max-width: 1000px) {
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window { padding: 12px 8px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window img { height: 112px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .window-bottom { font-size: 9px !important; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .personal-answer { grid-column: 5 / span 8; padding-right: 20px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question h3 { grid-row: 1 / span 2; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question :is(.mother-memory, .grandmother-memory) { grid-column: 5 / span 4; grid-row: 2; padding: 0 20px 24px; }
+}
+@media (max-width: 768px) {
+  html body.diary-home #J3964441023 #interviews .interviews-heading { grid-column: 1 / -1; grid-row: 2; padding: 24px 16px; border: 0; border-bottom: 1px solid var(--diary-ink); }
+  html body.diary-home #J3964441023 #interviews #interviews-title { font-size: 32px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage { grid-column: 1 / -1; grid-row: 3; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window { padding: 12px 8px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window img { height: 112px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .window-bottom { min-height: 44px; font-size: 9px !important; padding: 6px 4px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet { grid-row: 4; }
+  html body.diary-home #J3964441023 #interviews .generations { grid-row: 5; }
+  html body.diary-home #J3964441023 #interviews #everyday-care { grid-row: 6; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-heading { grid-column: 1 / -1; grid-row: 1; border-right: 0; padding: 24px 16px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet #conversation-name { font-size: 32px !important; margin-top: 20px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening :is(.mother-memory, .new-aunt-memory) { grid-column: 1 / span 6; grid-row: 2; padding: 0 16px 24px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening .--new-aunt-photo[data-photo='2'] { grid-column: 7 / span 6; grid-row: 2; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening .--new-aunt-photo[data-photo='3'] { grid-column: 1 / span 6; grid-row: 3; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .memory-opening .--new-aunt-photo[data-photo='4'] { grid-column: 7 / span 6; grid-row: 3; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question h3 { grid-column: 1 / -1; grid-row: 1; padding: 24px 16px 16px; border: 0; font-size: 24px !important; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .personal-answer,
+  html body.diary-home #J3964441023 #interviews #conversation-sheet[data-person^='aunt-'] .personal-answer { grid-column: 1 / -1; grid-row: 2; padding: 0 16px 24px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question :is(.mother-memory, .grandmother-memory) { grid-column: 1 / span 7; grid-row: 3; padding: 0 16px 24px; }
+  html body.diary-home #J3964441023 #interviews :is(#generations-title, #care-title) { font-size: 32px; padding: 24px 16px; }
+  html body.diary-home #J3964441023 #interviews .comparison h3 { grid-column: 1 / -1; border-right: 0; padding: 24px 16px 12px; font-size: 24px !important; }
+  html body.diary-home #J3964441023 #interviews .comparison-grid { grid-column: 1 / -1; }
+  html body.diary-home #J3964441023 #interviews .comparison-answer { padding: 16px; }
+  html body.diary-home #J3964441023 #interviews #everyday-care .care-heading { grid-column: 1 / -1; border: 0; border-bottom: 1px solid var(--diary-ink); }
+  html body.diary-home #J3964441023 #interviews #everyday-care .care-objects { grid-column: 1 / -1; }
+  html body.diary-home #J3964441023 #interviews #everyday-care .care-objects article { padding: 24px 16px; }
+}
+@media (max-width: 432px) {
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window { padding: 10px 5px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .portrait-window img { height: 88px; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .window-bottom { font-size: 8px !important; overflow-wrap: anywhere; }
+  html body.diary-home #J3964441023 #interviews .spiral-collage .window-bottom span { display: none; }
+  html body.diary-home #J3964441023 #interviews .comparison-grid { grid-template-columns: 1fr; }
+  html body.diary-home #J3964441023 #interviews .comparison-answer { padding-top: 12px; }
+  html body.diary-home #J3964441023 #interviews #conversation-sheet .sheet-question :is(.mother-memory, .grandmother-memory) { grid-column: 1 / span 9; }
+}
